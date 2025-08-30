@@ -12,12 +12,12 @@ const PopcornIcon = (props: React.SVGProps<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
   >
     {/* Bucket */}
-    <path d="M35 90 L25 40 H 75 L 65 90 Z" fill="white" stroke="gray" strokeWidth="5"/>
+    <path d="M40 90 L35 70 H 65 L 60 90 Z" fill="white" stroke="gray" strokeWidth="3"/>
     
     {/* Red Stripes */}
-    <path d="M35 90 L25 40 H 40 L 45 90 Z" fill="#D94A4A"/>
-    <path d="M50 40 L50 90" stroke="#D94A4A" strokeWidth="10"/>
-    <path d="M65 90 L75 40 H 60 L 55 90 Z" fill="#D94A4A"/>
+    <path d="M40 90 L35 70 H 45 L 47 90 Z" fill="#D94A4A"/>
+    <path d="M50 70 L50 90" stroke="#D94A4A" strokeWidth="5"/>
+    <path d="M60 90 L65 70 H 55 L 53 90 Z" fill="#D94A4A"/>
 
     {/* Popcorn */}
     <motion.g 
@@ -27,7 +27,7 @@ const PopcornIcon = (props: React.SVGProps<SVGSVGElement>) => (
         initial="hidden"
         animate="visible"
         variants={{
-            hidden: { y: -80, opacity: 0 },
+            hidden: { y: -30, opacity: 0 },
             visible: { 
                 y: 0, 
                 opacity: 1,
@@ -40,12 +40,12 @@ const PopcornIcon = (props: React.SVGProps<SVGSVGElement>) => (
             },
         }}
     >
-        <motion.circle variants={{ hidden: { y: -80, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="50" cy="25" r="12" />
-        <motion.circle variants={{ hidden: { y: -80, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="38" cy="30" r="14" />
-        <motion.circle variants={{ hidden: { y: -80, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="62" cy="30" r="14" />
-        <motion.circle variants={{ hidden: { y: -80, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="30" cy="40" r="12" />
-        <motion.circle variants={{ hidden: { y: -80, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="70" cy="40" r="12" />
-        <motion.circle variants={{ hidden: { y: -80, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="50" cy="35" r="14" />
+        <motion.circle variants={{ hidden: { y: -30, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="50" cy="50" r="10" />
+        <motion.circle variants={{ hidden: { y: -30, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="40" cy="55" r="12" />
+        <motion.circle variants={{ hidden: { y: -30, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="60" cy="55" r="12" />
+        <motion.circle variants={{ hidden: { y: -30, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="32" cy="65" r="10" />
+        <motion.circle variants={{ hidden: { y: -30, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="68" cy="65" r="10" />
+        <motion.circle variants={{ hidden: { y: -30, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="50" cy="60" r="12" />
     </motion.g>
   </svg>
 );
