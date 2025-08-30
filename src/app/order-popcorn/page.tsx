@@ -12,19 +12,17 @@ import { Input } from '@/components/ui/input';
 import { Popcorn, ShoppingCart, Minus, Plus } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { cn } from '@/lib/utils';
 
 const popcornOptions = [
-  { id: 'salted-caramel', name: 'Salted Caramel', price: 350, imageUrl: 'https://picsum.photos/200/200?random=1', imageHint: 'caramel popcorn' },
-  { id: 'cheddar-cheese', name: 'Cheddar Cheese', price: 300, imageUrl: 'https://picsum.photos/200/200?random=2', imageHint: 'cheese popcorn' },
-  { id: 'classic-butter', name: 'Classic Butter', price: 250, imageUrl: 'https://picsum.photos/200/200?random=3', imageHint: 'buttered popcorn' },
+  { id: 'salted-caramel', name: 'Salted Caramel', price: 350 },
+  { id: 'cheddar-cheese', name: 'Cheddar Cheese', price: 300 },
+  { id: 'classic-butter', name: 'Classic Butter', price: 250 },
 ];
 
 const drinkOptions = [
-    { id: 'coke', name: 'Coke', price: 120, imageUrl: 'https://picsum.photos/200/200?random=4', imageHint: 'soda can' },
-    { id: 'pepsi', name: 'Pepsi', price: 120, imageUrl: 'https://picsum.photos/200/200?random=5', imageHint: 'soda can' },
-    { id: 'sprite', name: 'Sprite', price: 120, imageUrl: 'https://picsum.photos/200/200?random=6', imageHint: 'soda can' },
+    { id: 'coke', name: 'Coke', price: 120 },
+    { id: 'pepsi', name: 'Pepsi', price: 120 },
+    { id: 'sprite', name: 'Sprite', price: 120 },
 ]
 
 export default function OrderPopcornPage() {
@@ -108,7 +106,6 @@ export default function OrderPopcornPage() {
                             htmlFor={popcorn.id} 
                             className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary cursor-pointer"
                           >
-                            <Image src={popcorn.imageUrl} alt={popcorn.name} width={100} height={100} className="rounded-full mb-4 object-cover aspect-square" data-ai-hint={popcorn.imageHint}/>
                             <span className="font-bold text-center">{popcorn.name}</span>
                             <span className="text-muted-foreground">₹{popcorn.price.toFixed(2)}</span>
                           </Label>
@@ -141,7 +138,6 @@ export default function OrderPopcornPage() {
                             htmlFor={drink.id} 
                             className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary cursor-pointer"
                           >
-                            <Image src={drink.imageUrl} alt={drink.name} width={100} height={100} className="rounded-full mb-4 object-cover aspect-square" data-ai-hint={drink.imageHint}/>
                             <span className="font-bold text-center">{drink.name}</span>
                             <span className="text-muted-foreground">₹{drink.price.toFixed(2)}</span>
                           </Label>
