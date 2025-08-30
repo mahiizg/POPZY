@@ -20,7 +20,7 @@ export default function Header({ searchTerm, setSearchTerm, viewingHistory, onCl
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between gap-4">
         <div className="hidden md:flex">
-          <SidebarTrigger />
+          
         </div>
         <div className="flex flex-1 items-center justify-end gap-2 sm:gap-4">
           <div className="relative w-full max-w-xs sm:max-w-sm">
