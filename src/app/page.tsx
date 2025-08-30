@@ -2,16 +2,15 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { motion } from 'framer-motion';
-import { ArrowRight, PlusCircle } from 'lucide-react';
+import { ArrowRight, PlusCircle, User, UserCog, UserCheck } from 'lucide-react';
 import Logo from '@/components/logo';
 
 const profiles = [
-  { name: 'Alice', imageUrl: 'https://picsum.photos/200/200?random=1', hint: 'woman smiling' },
-  { name: 'Ben', imageUrl: 'https://picsum.photos/200/200?random=2', hint: 'man glasses' },
-  { name: 'Charlie', imageUrl: 'https://picsum.photos/200/200?random=3', hint: 'child playing' },
+  { name: 'Alice', icon: User },
+  { name: 'Ben', icon: UserCog },
+  { name: 'Charlie', icon: UserCheck },
 ];
 
 export default function ProfilesPage() {
@@ -39,20 +38,14 @@ export default function ProfilesPage() {
               key={profile.name}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
+              className="flex flex-col items-center"
             >
               <Card 
                 className="w-32 h-32 md:w-40 md:h-40 overflow-hidden cursor-pointer bg-card border-2 border-transparent hover:border-primary transition-colors"
                 onClick={handleProfileSelect}
               >
-                <CardContent className="p-0">
-                  <Image
-                    src={profile.imageUrl}
-                    alt={profile.name}
-                    width={160}
-                    height={160}
-                    className="object-cover w-full h-full"
-                    data-ai-hint={profile.hint}
-                  />
+                <CardContent className="p-0 flex items-center justify-center h-full">
+                  <profile.icon className="w-16 h-16 md:w-20 md:h-20 text-muted-foreground group-hover:text-primary transition-colors" />
                 </CardContent>
               </Card>
               <p className="mt-3 text-lg font-medium text-foreground">{profile.name}</p>
