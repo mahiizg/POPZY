@@ -13,7 +13,7 @@ import { Separator } from '@/components/ui/separator';
 import { Film, Tv, Clapperboard, Home as HomeIcon, ListFilter, Wand2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
-import { Sidebar, SidebarProvider, SidebarContent, SidebarInset, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarHeader, SidebarGroup, SidebarGroupLabel, SidebarGroupContent } from '@/components/ui/sidebar';
+import { Sidebar, SidebarProvider, SidebarContent, SidebarInset, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarHeader, SidebarGroup, SidebarGroupLabel, SidebarGroupContent, SidebarTrigger } from '@/components/ui/sidebar';
 import Logo from '@/components/logo';
 import { HeroSection } from '@/components/hero-section';
 import { RecommendationsSheet } from '@/components/recommendations-sheet';
