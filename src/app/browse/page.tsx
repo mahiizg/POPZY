@@ -13,6 +13,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { Separator } from '@/components/ui/separator';
 import { ChevronDown, ListFilter, Film } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 export default function BrowsePage() {
   const [isMounted, setIsMounted] = useState(false);
@@ -21,6 +22,7 @@ export default function BrowsePage() {
   const [activeGenres, setActiveGenres] = useState<Genre[]>([]);
   const [filteredContent, setFilteredContent] = useState<EntertainmentContent[]>([]);
   const [viewingHistory, setViewingHistory] = useState<EntertainmentContent[]>([]);
+  const router = useRouter();
 
   useEffect(() => {
     setIsMounted(true);
@@ -105,6 +107,13 @@ export default function BrowsePage() {
                   {category}
                 </Button>
               ))}
+              <Button
+                  variant='secondary'
+                  onClick={() => router.push('/order-popcorn')}
+                  className="capitalize shrink-0"
+                >
+                  Order Popcorn
+              </Button>
             </div>
             <Popover>
               <PopoverTrigger asChild>
