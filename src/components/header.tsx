@@ -24,7 +24,7 @@ export default function Header({ searchTerm, setSearchTerm }: HeaderProps) {
           </div>
         </div>
         <div className="flex flex-1 items-center justify-end gap-2 sm:gap-4">
-          <div className="relative w-full max-w-xs sm:max-w-sm">
+          <div className="relative w-full max-w-xs">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
               placeholder="Search content..."
