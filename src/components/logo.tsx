@@ -12,12 +12,12 @@ const PopcornIcon = (props: React.SVGProps<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
   >
     {/* Bucket */}
-    <path d="M35 95 L25 65 H 75 L 65 95 Z" fill="white" stroke="gray" strokeWidth="4"/>
+    <path d="M30 95 L20 45 H 80 L 70 95 Z" fill="white" stroke="gray" strokeWidth="5"/>
     
     {/* Red Stripes */}
-    <path d="M35 95 L25 65 H 42 L 44 95 Z" fill="#D94A4A"/>
-    <path d="M50 65 L50 95" stroke="#D94A4A" strokeWidth="6"/>
-    <path d="M65 95 L75 65 H 58 L 56 95 Z" fill="#D94A4A"/>
+    <path d="M30 95 L20 45 H 45 L 48 95 Z" fill="#D94A4A"/>
+    <path d="M50 45 L50 95" stroke="#D94A4A" strokeWidth="8"/>
+    <path d="M70 95 L80 45 H 55 L 52 95 Z" fill="#D94A4A"/>
 
     {/* Popcorn */}
     <motion.g 
@@ -40,12 +40,12 @@ const PopcornIcon = (props: React.SVGProps<SVGSVGElement>) => (
             },
         }}
     >
-        <motion.circle variants={{ hidden: { y: -50, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="50" cy="45" r="10" />
-        <motion.circle variants={{ hidden: { y: -50, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="40" cy="50" r="12" />
-        <motion.circle variants={{ hidden: { y: -50, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="60" cy="50" r="12" />
-        <motion.circle variants={{ hidden: { y: -50, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="32" cy="60" r="10" />
-        <motion.circle variants={{ hidden: { y: -50, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="68" cy="60" r="10" />
-        <motion.circle variants={{ hidden: { y: -50, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="50" cy="55" r="12" />
+        <motion.circle variants={{ hidden: { y: -50, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="50" cy="25" r="12" />
+        <motion.circle variants={{ hidden: { y: -50, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="38" cy="30" r="14" />
+        <motion.circle variants={{ hidden: { y: -50, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="62" cy="30" r="14" />
+        <motion.circle variants={{ hidden: { y: -50, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="28" cy="40" r="12" />
+        <motion.circle variants={{ hidden: { y: -50, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="72" cy="40" r="12" />
+        <motion.circle variants={{ hidden: { y: -50, opacity: 0 }, visible: { y: 0, opacity: 1 } }} cx="50" cy="35" r="14" />
     </motion.g>
   </svg>
 );
@@ -54,9 +54,9 @@ const PopcornIcon = (props: React.SVGProps<SVGSVGElement>) => (
 const Logo = ({ className }: { className?: string }) => {
   return (
     <Link href="/" className={cn('flex items-center', className)}>
-      <div className="font-bold uppercase text-5xl tracking-wider text-foreground flex items-center">
+      <div className="font-bold uppercase text-5xl text-foreground flex items-center">
         <span>P</span>
-        <PopcornIcon className="w-[4.5rem] h-[4.5rem]" />
+        <PopcornIcon className="w-[3rem] h-[3rem]" />
         <span>PZY</span>
       </div>
     </Link>
