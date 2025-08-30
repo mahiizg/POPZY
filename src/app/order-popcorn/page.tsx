@@ -14,9 +14,33 @@ import { useToast } from '@/hooks/use-toast';
 import { motion } from 'framer-motion';
 
 const popcornOptions = [
-  { id: 'salted-caramel', name: 'Salted Caramel', price: 350 },
-  { id: 'cheddar-cheese', name: 'Cheddar Cheese', price: 300 },
-  { id: 'classic-butter', name: 'Classic Butter', price: 250 },
+  { 
+    id: 'salted-caramel', 
+    name: 'Salted Caramel', 
+    sizes: [
+      { id: 'small', name: 'Small', price: 250 },
+      { id: 'medium', name: 'Medium', price: 350 },
+      { id: 'large', name: 'Large', price: 450 }
+    ] 
+  },
+  { 
+    id: 'cheddar-cheese', 
+    name: 'Cheddar Cheese', 
+    sizes: [
+        { id: 'small', name: 'Small', price: 200 },
+        { id: 'medium', name: 'Medium', price: 300 },
+        { id: 'large', name: 'Large', price: 400 }
+    ]
+  },
+  { 
+    id: 'classic-butter', 
+    name: 'Classic Butter',
+    sizes: [
+        { id: 'small', name: 'Small', price: 150 },
+        { id: 'medium', name: 'Medium', price: 250 },
+        { id: 'large', name: 'Large', price: 350 }
+    ]
+  },
 ];
 
 const drinkOptions = [
@@ -28,7 +52,8 @@ const drinkOptions = [
 export default function OrderPopcornPage() {
   const router = useRouter();
   const { toast } = useToast();
-  const [selectedPopcorn, setSelectedPopcorn] = useState<string | null>(null);
+  const [selectedPopcornFlavor, setSelectedPopcornFlavor] = useState<string | null>(null);
+  const [selectedPopcornSize, setSelectedPopcornSize] = useState<string | null>(null);
   const [popcornQuantity, setPopcornQuantity] = useState(1);
   const [selectedDrink, setSelectedDrink] = useState<string | null>(null);
   const [drinkQuantity, setDrinkQuantity] = useState(1);
@@ -36,9 +61,10 @@ export default function OrderPopcornPage() {
 
   const calculateTotal = () => {
     let currentTotal = 0;
-    if (selectedPopcorn) {
-        const popcorn = popcornOptions.find(p => p.id === selectedPopcorn);
-        if(popcorn) currentTotal += popcorn.price * popcornQuantity;
+    if (selectedPopcornFlavor && selectedPopcornSize) {
+        const popcornFlavor = popcornOptions.find(p => p.id === selectedPopcornFlavor);
+        const popcornSize = popcornFlavor?.sizes.find(s => s.id === selectedPopcornSize);
+        if(popcornSize) currentTotal += popcornSize.price * popcornQuantity;
     }
     if (selectedDrink) {
         const drink = drinkOptions.find(d => d.id === selectedDrink);
@@ -49,11 +75,17 @@ export default function OrderPopcornPage() {
 
   useEffect(() => {
     calculateTotal();
-  }, [selectedPopcorn, popcornQuantity, selectedDrink, drinkQuantity]);
+  }, [selectedPopcornFlavor, selectedPopcornSize, popcornQuantity, selectedDrink, drinkQuantity]);
 
+  const handleFlavorChange = (flavorId: string) => {
+    setSelectedPopcornFlavor(flavorId);
+    // Reset size and quantity when flavor changes
+    setSelectedPopcornSize(null);
+    setPopcornQuantity(1);
+  }
 
   const handlePlaceOrder = () => {
-    if (!selectedPopcorn && !selectedDrink) {
+    if ((!selectedPopcornFlavor || !selectedPopcornSize) && !selectedDrink) {
       toast({
         title: 'Empty Cart',
         description: 'Please select an item to order.',
@@ -61,10 +93,21 @@ export default function OrderPopcornPage() {
       });
       return;
     }
+    
+    if (selectedPopcornFlavor && !selectedPopcornSize) {
+        toast({
+          title: 'Select Size',
+          description: 'Please select a bucket size for your popcorn.',
+          variant: 'destructive',
+        });
+        return;
+      }
 
     const query = new URLSearchParams();
-    if (selectedPopcorn) {
-        query.append('popcornId', selectedPopcorn);
+    if (selectedPopcornFlavor && selectedPopcornSize) {
+        const flavor = popcornOptions.find(p => p.id === selectedPopcornFlavor);
+        const size = flavor?.sizes.find(s => s.id === selectedPopcornSize);
+        query.append('popcornId', `${flavor?.name} (${size?.name})`);
         query.append('popcornQty', popcornQuantity.toString());
     }
     if(selectedDrink) {
@@ -98,7 +141,7 @@ export default function OrderPopcornPage() {
                     <CardTitle>Choose Your Popcorn</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <RadioGroup value={selectedPopcorn || ""} onValueChange={setSelectedPopcorn} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <RadioGroup value={selectedPopcornFlavor || ""} onValueChange={handleFlavorChange} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                       {popcornOptions.map((popcorn) => (
                         <div key={popcorn.id}>
                           <RadioGroupItem value={popcorn.id} id={popcorn.id} className="peer sr-only" />
@@ -107,19 +150,39 @@ export default function OrderPopcornPage() {
                             className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary cursor-pointer"
                           >
                             <span className="font-bold text-center">{popcorn.name}</span>
-                            <span className="text-muted-foreground">₹{popcorn.price.toFixed(2)}</span>
                           </Label>
                         </div>
                       ))}
                     </RadioGroup>
-                    {selectedPopcorn && (
-                      <div className="flex items-center justify-center gap-4 mt-6">
-                          <Label>Quantity</Label>
-                          <div className='flex items-center gap-2'>
-                              <Button variant="outline" size="icon" onClick={() => setPopcornQuantity(Math.max(1, popcornQuantity - 1))}><Minus className="h-4 w-4"/></Button>
-                              <Input type="number" value={popcornQuantity} readOnly className="w-16 text-center" />
-                              <Button variant="outline" size="icon" onClick={() => setPopcornQuantity(popcornQuantity + 1)}><Plus className="h-4 w-4"/></Button>
-                          </div>
+
+                    {selectedPopcornFlavor && (
+                      <div className="mt-6">
+                        <h3 className="text-lg font-semibold text-center mb-4">Select Bucket Size</h3>
+                         <RadioGroup value={selectedPopcornSize || ""} onValueChange={setSelectedPopcornSize} className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            {popcornOptions.find(p => p.id === selectedPopcornFlavor)?.sizes.map(size => (
+                                <div key={size.id}>
+                                    <RadioGroupItem value={size.id} id={`${selectedPopcornFlavor}-${size.id}`} className="peer sr-only" />
+                                    <Label 
+                                    htmlFor={`${selectedPopcornFlavor}-${size.id}`} 
+                                    className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary cursor-pointer"
+                                    >
+                                    <span className="font-bold capitalize">{size.name}</span>
+                                    <span className="text-muted-foreground">₹{size.price.toFixed(2)}</span>
+                                    </Label>
+                                </div>
+                            ))}
+                        </RadioGroup>
+
+                        {selectedPopcornSize && (
+                            <div className="flex items-center justify-center gap-4 mt-6">
+                                <Label>Quantity</Label>
+                                <div className='flex items-center gap-2'>
+                                    <Button variant="outline" size="icon" onClick={() => setPopcornQuantity(Math.max(1, popcornQuantity - 1))}><Minus className="h-4 w-4"/></Button>
+                                    <Input type="number" value={popcornQuantity} readOnly className="w-16 text-center" />
+                                    <Button variant="outline" size="icon" onClick={() => setPopcornQuantity(popcornQuantity + 1)}><Plus className="h-4 w-4"/></Button>
+                                </div>
+                            </div>
+                        )}
                       </div>
                     )}
                   </CardContent>
@@ -164,14 +227,21 @@ export default function OrderPopcornPage() {
                       <CardTitle>Your Order</CardTitle>
                     </CardHeader>
                     <CardContent className="flex flex-col gap-4">
-                        {selectedPopcorn && popcornOptions.find(p => p.id === selectedPopcorn) &&
-                           <div className='flex justify-between items-center'>
-                                <div>
-                                    <p className='font-semibold'>{popcornOptions.find(p => p.id === selectedPopcorn)?.name}</p>
-                                    <p className='text-sm text-muted-foreground'>Quantity: {popcornQuantity}</p>
-                                </div>
-                                <p>₹{(popcornOptions.find(p => p.id === selectedPopcorn)!.price * popcornQuantity).toFixed(2)}</p>
-                           </div>
+                        {selectedPopcornFlavor && selectedPopcornSize && 
+                           (() => {
+                                const flavor = popcornOptions.find(p => p.id === selectedPopcornFlavor);
+                                const size = flavor?.sizes.find(s => s.id === selectedPopcornSize);
+                                if (!flavor || !size) return null;
+                                return (
+                                   <div className='flex justify-between items-center'>
+                                        <div>
+                                            <p className='font-semibold'>{flavor.name} ({size.name})</p>
+                                            <p className='text-sm text-muted-foreground'>Quantity: {popcornQuantity}</p>
+                                        </div>
+                                        <p>₹{(size.price * popcornQuantity).toFixed(2)}</p>
+                                   </div>
+                                )
+                           })()
                         }
                         {selectedDrink && drinkOptions.find(d => d.id === selectedDrink) &&
                            <div className='flex justify-between items-center'>
