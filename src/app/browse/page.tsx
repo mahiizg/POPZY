@@ -9,12 +9,11 @@ import { ContentCard } from '@/components/content-card';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Separator } from '@/components/ui/separator';
-import { ChevronDown, ListFilter, Film, Tv, Clapperboard, LayoutGrid, Popcorn as PopcornIcon, Home } from 'lucide-react';
+import { Film, Tv, Clapperboard, Home as HomeIcon, Popcorn as PopcornIcon, ListFilter } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
-import { Sidebar, SidebarProvider, SidebarContent, SidebarInset, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarHeader, SidebarTrigger } from '@/components/ui/sidebar';
+import { Sidebar, SidebarProvider, SidebarContent, SidebarInset, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarHeader, SidebarTrigger, SidebarGroup, SidebarGroupLabel, SidebarGroupContent } from '@/components/ui/sidebar';
 import Logo from '@/components/logo';
 
 export default function BrowsePage() {
@@ -33,7 +32,7 @@ export default function BrowsePage() {
       if (storedHistory) {
         setViewingHistory(JSON.parse(storedHistory));
       }
-    } catch (error) {
+    } catch (error) => {
       console.error("Failed to parse viewing history from localStorage", error);
       setViewingHistory([]);
     }
@@ -73,15 +72,11 @@ export default function BrowsePage() {
     });
   };
 
-  const handleClearHistory = () => {
-    setViewingHistory([]);
-  };
-
-  const categories: {name: Category | 'all', icon: React.ElementType}[] = [
-    { name: 'all', icon: LayoutGrid }, 
-    { name: 'movie', icon: Film },
-    { name: 'tv show', icon: Tv }, 
-    { name: 'webseries', icon: Clapperboard }
+  const categories: {name: Category | 'all', label: string, icon: React.ElementType}[] = [
+    { name: 'all', label: 'Home', icon: HomeIcon },
+    { name: 'movie', label: 'Movies', icon: Film },
+    { name: 'tv show', label: 'TV Shows', icon: Tv }, 
+    { name: 'webseries', label: 'Webseries', icon: Clapperboard }
   ];
 
   if (!isMounted) {
@@ -93,7 +88,7 @@ export default function BrowsePage() {
   }
 
   return (
-    <SidebarProvider defaultOpen={false}>
+    <SidebarProvider defaultOpen={true}>
       <Sidebar collapsible="icon">
         <SidebarHeader>
           <Logo />
@@ -102,25 +97,54 @@ export default function BrowsePage() {
           <SidebarMenu>
             <SidebarMenuItem>
               <SidebarMenuButton onClick={() => router.push('/')} tooltip="Profiles">
-                <Home />
+                <HomeIcon />
                 <span>Profiles</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
           </SidebarMenu>
           <Separator className="my-2" />
           <SidebarMenu>
-            {categories.map(({name, icon: Icon}) => (
+            {categories.map(({name, label, icon: Icon}) => (
               <SidebarMenuItem key={name}>
                 <SidebarMenuButton 
                   onClick={() => setActiveCategory(name)} 
                   isActive={activeCategory === name}
-                  tooltip={name.charAt(0).toUpperCase() + name.slice(1)}
+                  tooltip={label}
                 >
                   <Icon />
-                  <span className="capitalize">{name}</span>
+                  <span className="capitalize">{label}</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             ))}
+          </SidebarMenu>
+           <Separator className="my-2" />
+          <SidebarGroup>
+            <SidebarGroupLabel className='flex items-center gap-2'>
+              <ListFilter className="w-4 h-4" />
+              <span>Genres</span>
+            </SidebarGroupLabel>
+            <SidebarGroupContent>
+              <div className="grid grid-cols-1 gap-y-2 max-h-64 overflow-y-auto pr-2">
+                {allGenres.map(genre => (
+                  <Label key={genre} className="flex items-center space-x-2 font-normal capitalize cursor-pointer">
+                    <Checkbox 
+                      id={genre} 
+                      checked={activeGenres.includes(genre)}
+                      onCheckedChange={(checked) => {
+                        setActiveGenres(prev => 
+                          checked ? [...prev, genre] : prev.filter(g => g !== genre)
+                        )
+                      }}
+                    />
+                    <span>{genre}</span>
+                  </Label>
+                ))}
+              </div>
+              {activeGenres.length > 0 && <Button variant="ghost" size="sm" onClick={() => setActiveGenres([])} className="w-full mt-2 justify-start px-2 h-auto py-1">Clear all</Button>}
+            </SidebarGroupContent>
+          </SidebarGroup>
+           <Separator className="my-2" />
+          <SidebarMenu>
              <SidebarMenuItem>
                 <SidebarMenuButton onClick={() => router.push('/order-popcorn')} tooltip="Order Popcorn">
                   <PopcornIcon />
@@ -132,55 +156,12 @@ export default function BrowsePage() {
       </Sidebar>
       <SidebarInset>
         <div className="flex flex-col min-h-screen">
-        <Header 
-            searchTerm={searchTerm} 
-            setSearchTerm={setSearchTerm} 
-            viewingHistory={viewingHistory}
-            onClearHistory={handleClearHistory}
-        />
+        <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         <main className="flex-1">
             <div className="container mx-auto px-4 py-8">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
-                <div className="flex items-center gap-2">
-                  <h2 className="text-2xl font-semibold capitalize">{activeCategory}</h2>
-                  <SidebarTrigger className="md:hidden" />
-                </div>
-                <Popover>
-                <PopoverTrigger asChild>
-                    <Button variant="outline" className="w-full md:w-auto shrink-0">
-                    <ListFilter className="mr-2 h-4 w-4" />
-                    Genres
-                    {activeGenres.length > 0 && ` (${activeGenres.length})`}
-                    <ChevronDown className="ml-2 h-4 w-4" />
-                    </Button>
-                </PopoverTrigger>
-                <PopoverContent className="w-64">
-                    <div className="grid gap-4">
-                    <div className="space-y-2">
-                        <h4 className="font-medium leading-none">Filter by Genre</h4>
-                        <p className="text-sm text-muted-foreground">Select one or more genres.</p>
-                    </div>
-                    <Separator />
-                    <div className="grid grid-cols-2 gap-2 max-h-64 overflow-y-auto pr-2">
-                        {allGenres.map(genre => (
-                            <Label key={genre} className="flex items-center space-x-2 font-normal capitalize cursor-pointer">
-                                <Checkbox 
-                                    id={genre} 
-                                    checked={activeGenres.includes(genre)}
-                                    onCheckedChange={(checked) => {
-                                        setActiveGenres(prev => 
-                                            checked ? [...prev, genre] : prev.filter(g => g !== genre)
-                                        )
-                                    }}
-                                />
-                                <span>{genre}</span>
-                            </Label>
-                        ))}
-                    </div>
-                    {activeGenres.length > 0 && <Button variant="ghost" size="sm" onClick={() => setActiveGenres([])}>Clear all</Button>}
-                    </div>
-                </PopoverContent>
-                </Popover>
+            <div className="flex items-center justify-between gap-4 mb-8">
+                <h2 className="text-2xl font-semibold capitalize">{activeCategory === 'all' ? 'Home' : activeCategory}</h2>
+                <SidebarTrigger className="md:hidden" />
             </div>
 
             <AnimatePresence>

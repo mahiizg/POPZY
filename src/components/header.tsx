@@ -3,19 +3,14 @@
 
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Search, Sparkles } from 'lucide-react';
-import { RecommendationsSheet } from './recommendations-sheet';
-import type { EntertainmentContent } from '@/lib/types';
-import { SidebarTrigger } from './ui/sidebar';
+import { Search } from 'lucide-react';
 
 interface HeaderProps {
   searchTerm: string;
   setSearchTerm: (term: string) => void;
-  viewingHistory: EntertainmentContent[];
-  onClearHistory: () => void;
 }
 
-export default function Header({ searchTerm, setSearchTerm, viewingHistory, onClearHistory }: HeaderProps) {
+export default function Header({ searchTerm, setSearchTerm }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between gap-4">
@@ -32,12 +27,6 @@ export default function Header({ searchTerm, setSearchTerm, viewingHistory, onCl
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
-          <RecommendationsSheet viewingHistory={viewingHistory} onClearHistory={onClearHistory}>
-             <Button variant="secondary" className="shrink-0">
-              <Sparkles className="mr-0 sm:mr-2 h-4 w-4" />
-              <span className="hidden sm:inline">Recommendations</span>
-            </Button>
-          </RecommendationsSheet>
         </div>
       </div>
     </header>

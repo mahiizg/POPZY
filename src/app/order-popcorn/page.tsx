@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Header from '@/components/header';
 import { Button } from '@/components/ui/button';
@@ -47,9 +47,10 @@ export default function OrderPopcornPage() {
     setTotal(currentTotal);
   };
 
-  useState(() => {
+  useEffect(() => {
     calculateTotal();
-  });
+  }, [selectedPopcorn, popcornQuantity, selectedDrink, drinkQuantity]);
+
 
   const handlePlaceOrder = () => {
     if (!selectedPopcorn && !selectedDrink) {
@@ -76,7 +77,7 @@ export default function OrderPopcornPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header searchTerm="" setSearchTerm={() => {}} viewingHistory={[]} onClearHistory={() => {}} />
+      <Header searchTerm="" setSearchTerm={() => {}} />
       <main className="flex-1">
         <div className="container mx-auto px-4 py-8">
           <motion.div
