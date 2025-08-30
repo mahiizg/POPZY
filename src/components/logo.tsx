@@ -9,15 +9,15 @@ const PopcornIcon = (props: React.SVGProps<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
   >
     {/* Bucket */}
-    <path d="M25 90 L35 20 H 65 L 75 90 Z" fill="white" stroke="gray" strokeWidth="1"/>
+    <path d="M30 90 L20 20 H 80 L 70 90 Z" fill="white" stroke="gray" strokeWidth="3"/>
     
     {/* Red Stripes */}
-    <path d="M35 20 L 37 90 H 43 L 41 20 Z" fill="#D94A4A"/>
-    <path d="M49 20 L 51 90 H 57 L 55 20 Z" fill="#D94A4A"/>
-    <path d="M63 20 L 65 90 H 71 L 69 20 Z" fill="#D94A4A"/>
+    <path d="M30 90 L20 20 H 30 L 38 90 Z" fill="#D94A4A"/>
+    <path d="M50 20 L50 90" stroke="#D94A4A" strokeWidth="8"/>
+    <path d="M70 90 L80 20 H 70 L62 90 Z" fill="#D94A4A"/>
 
     {/* Popcorn */}
-    <g stroke="orange" strokeWidth="1" fill="#FFFBEA">
+    <g stroke="orange" strokeWidth="2" fill="#FFFBEA">
         <circle cx="50" cy="20" r="10" />
         <circle cx="40" cy="25" r="12" />
         <circle cx="60" cy="25" r="12" />
