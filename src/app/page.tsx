@@ -4,13 +4,13 @@
 import { useRouter } from 'next/navigation';
 import { Card, CardContent } from '@/components/ui/card';
 import { motion } from 'framer-motion';
-import { ArrowRight, PlusCircle, User, UserCog, UserCheck } from 'lucide-react';
+import { PlusCircle, User } from 'lucide-react';
 import Logo from '@/components/logo';
 
 const profiles = [
   { name: 'Alice', icon: User },
-  { name: 'Ben', icon: UserCog },
-  { name: 'Charlie', icon: UserCheck },
+  { name: 'Ben', icon: User },
+  { name: 'Charlie', icon: User },
 ];
 
 export default function ProfilesPage() {
