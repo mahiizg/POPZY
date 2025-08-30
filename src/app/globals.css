@@ -51,13 +51,13 @@
 
 @keyframes gradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 50% 0%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 50% 100%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 50% 0%;
   }
 }
 
@@ -67,7 +67,7 @@
   }
   body {
     @apply text-foreground;
-    background: linear-gradient(-45deg, #000000, #000000, #b8860b, #000000, #000000);
+    background: linear-gradient(to bottom, #000000, #000000, #b8860b, #000000, #000000);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     font-feature-settings: 'rlig' 1, 'calt' 1;
