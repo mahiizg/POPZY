@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -47,7 +48,7 @@ export function ContentCard({ content, onMarkAsWatched, isWatched }: ContentCard
           ))}
         </div>
       </CardContent>
-      <CardFooter className="p-4 pt-0 flex gap-2">
+      <CardFooter className="p-4 pt-0 grid grid-cols-2 gap-2">
         <ContentDetailsDialog content={content}>
            <Button variant="outline" className="w-full">
              <Info className="mr-2 h-4 w-4" />
