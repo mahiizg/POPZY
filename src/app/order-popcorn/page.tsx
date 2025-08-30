@@ -14,15 +14,15 @@ import { useToast } from '@/hooks/use-toast';
 import { motion } from 'framer-motion';
 
 const popcornOptions = [
-  { id: 'salted-caramel', name: 'Salted Caramel', price: 8 },
-  { id: 'cheddar-cheese', name: 'Cheddar Cheese', price: 7 },
-  { id: 'classic-butter', name: 'Classic Butter', price: 6 },
+  { id: 'salted-caramel', name: 'Salted Caramel', price: 650 },
+  { id: 'cheddar-cheese', name: 'Cheddar Cheese', price: 550 },
+  { id: 'classic-butter', name: 'Classic Butter', price: 450 },
 ];
 
 const drinkOptions = [
-    { id: 'coke', name: 'Coke', price: 3 },
-    { id: 'pepsi', name: 'Pepsi', price: 3 },
-    { id: 'sprite', name: 'Sprite', price: 3 },
+    { id: 'coke', name: 'Coke', price: 150 },
+    { id: 'pepsi', name: 'Pepsi', price: 150 },
+    { id: 'sprite', name: 'Sprite', price: 150 },
 ]
 
 export default function OrderPopcornPage() {
@@ -62,17 +62,18 @@ export default function OrderPopcornPage() {
       return;
     }
 
-    toast({
-      title: 'Order Placed!',
-      description: `Your order for ${popcornQuantity} popcorn and ${drinkQuantity} drink(s) has been placed. Total: $${total.toFixed(2)}`,
-    });
-
-    // Reset state
-    setSelectedPopcorn(null);
-    setPopcornQuantity(1);
-    setSelectedDrink(null);
-    setDrinkQuantity(1);
-    setTotal(0);
+    const query = new URLSearchParams();
+    if (selectedPopcorn) {
+        query.append('popcornId', selectedPopcorn);
+        query.append('popcornQty', popcornQuantity.toString());
+    }
+    if(selectedDrink) {
+        query.append('drinkId', selectedDrink);
+        query.append('drinkQty', drinkQuantity.toString());
+    }
+    query.append('total', total.toString());
+    
+    router.push(`/order-details?${query.toString()}`);
   };
 
   return (
@@ -103,7 +104,7 @@ export default function OrderPopcornPage() {
                           <RadioGroupItem value={popcorn.id} id={popcorn.id} />
                           {popcorn.name}
                         </Label>
-                        <span className="font-semibold">${popcorn.price.toFixed(2)}</span>
+                        <span className="font-semibold">₹{popcorn.price.toFixed(2)}</span>
                       </div>
                     ))}
                   </RadioGroup>
@@ -131,7 +132,7 @@ export default function OrderPopcornPage() {
                           <RadioGroupItem value={drink.id} id={drink.id} />
                           {drink.name}
                         </Label>
-                        <span className="font-semibold">${drink.price.toFixed(2)}</span>
+                        <span className="font-semibold">₹{drink.price.toFixed(2)}</span>
                       </div>
                     ))}
                   </RadioGroup>
@@ -153,7 +154,7 @@ export default function OrderPopcornPage() {
                 <CardContent className="p-6 flex items-center justify-between">
                     <div>
                         <p className="text-lg font-semibold">Total</p>
-                        <p className="text-3xl font-bold">${total.toFixed(2)}</p>
+                        <p className="text-3xl font-bold">₹{total.toFixed(2)}</p>
                     </div>
                     <Button size="lg" onClick={handlePlaceOrder}>
                         <ShoppingCart className="mr-2 h-5 w-5" />
