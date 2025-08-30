@@ -4,6 +4,7 @@
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useSidebar } from './ui/sidebar';
 
 const PopcornIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
@@ -12,7 +13,7 @@ const PopcornIcon = (props: React.SVGProps<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
   >
     {/* Bucket */}
-    <g transform="translate(15, 30) scale(0.7)">
+    <g transform="translate(20, 30) scale(0.6)">
       <path d="M30 85 L25 45 H 75 L 70 85 Z" fill="white" stroke="gray" strokeWidth="6"/>
       {/* Red Stripes */}
       <path d="M30 85 L25 45 H 50 L 50 85 Z" fill="#D94A4A"/>
@@ -52,12 +53,23 @@ const PopcornIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 
 const Logo = ({ className }: { className?: string }) => {
+  let sidebar;
+  try {
+    sidebar = useSidebar();
+  } catch (e) {
+    sidebar = null;
+  }
+  
+  const state = sidebar?.state;
+
   return (
     <Link href="/" className={cn('flex items-center', className)}>
-      <div className="font-bold uppercase text-5xl text-foreground flex items-center">
-        <span className="tracking-tighter">P</span>
-        <PopcornIcon className="w-[3.2rem] h-[3.2rem] -ml-2" />
-        <span className="tracking-tighter -ml-2">PZY</span>
+      <div className={cn("font-bold uppercase text-5xl text-foreground flex items-center transition-all duration-300",
+        state === 'collapsed' ? 'text-2xl' : 'text-5xl'
+      )}>
+        <span className={cn("tracking-tighter", state === 'collapsed' ? 'hidden' : 'inline')}>P</span>
+        <PopcornIcon className={cn("transition-all duration-300", state === 'collapsed' ? "w-[2.2rem] h-[2.2rem] -ml-0" : "w-[3.2rem] h-[3.2rem] -ml-4")} />
+        <span className={cn("tracking-tighter", state === 'collapsed' ? 'hidden' : 'inline', '-ml-3')}>PZY</span>
       </div>
     </Link>
   );
