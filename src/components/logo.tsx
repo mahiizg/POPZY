@@ -8,28 +8,23 @@ const PopcornIcon = (props: React.SVGProps<SVGSVGElement>) => (
     viewBox="0 0 100 100"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <defs>
-      <linearGradient id="popcorn-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" style={{ stopColor: '#FDFCEC' }} />
-        <stop offset="100%" style={{ stopColor: '#FBEFB4' }} />
-      </linearGradient>
-    </defs>
-
-    {/* Popcorn Kernels - Simplified */}
-    <g fill="url(#popcorn-gradient)" stroke="#E5A000" strokeWidth="2">
-      <path d="M35,50 Q25,40 37,35 Q45,25 53,35 Q65,40 55,50 Z" />
-      <path d="M55,45 Q65,35 70,45 Q75,55 65,60 Z" />
-      <path d="M45,30 Q40,22 50,25 Q60,28 55,38 Z" />
-    </g>
-
     {/* Bucket */}
-    <path d="M20,95 L30,50 H70 L80,95 Z" fill="#FFFFFF" stroke="#CCCCCC" strokeWidth="1"/>
+    <path d="M25 90 L35 20 H 65 L 75 90 Z" fill="white" stroke="gray" strokeWidth="1"/>
     
-    {/* Stripes */}
-    <path d="M30,50 L28,95 H35 L37,50 Z" fill="#E53E3E" />
-    <path d="M44,50 L42,95 H49 L51,50 Z" fill="#E53E3E" />
-    <path d="M58,50 L56,95 H63 L65,50 Z" fill="#E53E3E" />
-    <path d="M72,50 L70,95 H77 L79,50 Z" fill="#E53E3E" />
+    {/* Red Stripes */}
+    <path d="M35 20 L 37 90 H 43 L 41 20 Z" fill="#D94A4A"/>
+    <path d="M49 20 L 51 90 H 57 L 55 20 Z" fill="#D94A4A"/>
+    <path d="M63 20 L 65 90 H 71 L 69 20 Z" fill="#D94A4A"/>
+
+    {/* Popcorn */}
+    <g stroke="orange" strokeWidth="1" fill="#FFFBEA">
+        <circle cx="50" cy="20" r="10" />
+        <circle cx="40" cy="25" r="12" />
+        <circle cx="60" cy="25" r="12" />
+        <circle cx="35" cy="40" r="10" />
+        <circle cx="65" cy="40" r="10" />
+        <circle cx="50" cy="35" r="12" />
+    </g>
   </svg>
 );
 
