@@ -14,7 +14,7 @@ const PopcornIcon = (props: React.SVGProps<SVGSVGElement>) => (
     {/* Red Stripes */}
     <path d="M30 90 L20 20 H 30 L 38 90 Z" fill="#D94A4A"/>
     <path d="M50 20 L50 90" stroke="#D94A4A" strokeWidth="8"/>
-    <path d="M70 90 L80 20 H 70 L62 90 Z" fill="#D94A4A"/>
+    <path d="M70 90 L80 20 H 70 L 62 90 Z" fill="#D94A4A"/>
 
     {/* Popcorn */}
     <g stroke="orange" strokeWidth="2" fill="#FFFBEA">
