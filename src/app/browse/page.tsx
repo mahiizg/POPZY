@@ -143,15 +143,6 @@ export default function BrowsePage() {
               {activeGenres.length > 0 && <Button variant="ghost" size="sm" onClick={() => setActiveGenres([])} className="w-full mt-2 justify-start px-2 h-auto py-1">Clear all</Button>}
             </SidebarGroupContent>
           </SidebarGroup>
-           <Separator className="my-2" />
-          <SidebarMenu>
-             <SidebarMenuItem>
-                <SidebarMenuButton onClick={() => router.push('/order-popcorn')} tooltip="Order Popcorn">
-                  <PopcornIcon />
-                  <span>Order Popcorn</span>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-          </SidebarMenu>
         </SidebarContent>
       </Sidebar>
       <SidebarInset>

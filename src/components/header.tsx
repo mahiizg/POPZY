@@ -1,11 +1,11 @@
-
 'use client';
 
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Search } from 'lucide-react';
+import { Popcorn, Search } from 'lucide-react';
 import Logo from './logo';
 import { SidebarTrigger } from './ui/sidebar';
+import { useRouter } from 'next/navigation';
 
 interface HeaderProps {
   searchTerm: string;
@@ -13,6 +13,7 @@ interface HeaderProps {
 }
 
 export default function Header({ searchTerm, setSearchTerm }: HeaderProps) {
+  const router = useRouter();
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between gap-4">
@@ -32,6 +33,10 @@ export default function Header({ searchTerm, setSearchTerm }: HeaderProps) {
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
+          <Button onClick={() => router.push('/order-popcorn')}>
+            <Popcorn className="mr-2 h-4 w-4" />
+            Order Popcorn
+          </Button>
         </div>
       </div>
     </header>
