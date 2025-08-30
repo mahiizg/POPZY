@@ -88,7 +88,7 @@ export default function BrowsePage() {
   }
 
   return (
-    <SidebarProvider defaultOpen={false}>
+    <SidebarProvider defaultOpen={true}>
       <Sidebar>
         <SidebarHeader className="md:hidden">
           <Logo />
