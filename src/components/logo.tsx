@@ -15,20 +15,11 @@ const PopcornIcon = (props: React.SVGProps<SVGSVGElement>) => (
       </linearGradient>
     </defs>
 
-    {/* Popcorn Kernels */}
-    <g fill="url(#popcorn-gradient)" stroke="#E5A000" strokeWidth="1">
-      <path d="M40,45 Q30,35 42,30 Q50,20 58,30 Q70,35 60,45 Z" />
-      <path d="M60,40 Q70,30 75,40 Q80,50 70,55 Z" />
-      <path d="M30,50 Q20,40 28,35 Q35,28 40,38 Z" />
-      <path d="M50,28 Q45,20 55,22 Q65,25 60,35 Z" />
-      <path d="M45,35 Q40,25 50,28 Q60,30 55,40 Z" />
-      <path d="M65,45 Q75,40 78,50 Q80,60 70,60 Z" />
-      <path d="M25,55 Q18,48 25,42 Q32,38 35,48 Z" />
-      <path d="M52,32 Q50,25 58,28 Q65,32 60,42 Z" />
-       <path d="M48,48 Q40,40 50,35 Q60,40 55,50Z" />
-      <path d="M62,50 Q72,45 76,55 Q80,65 70,65Z" />
-      <path d="M35,55 Q28,50 33,45 Q40,42 42,52Z" />
-      <path d="M55,38 Q50,30 60,32 Q68,35 63,45Z" />
+    {/* Popcorn Kernels - Simplified */}
+    <g fill="url(#popcorn-gradient)" stroke="#E5A000" strokeWidth="2">
+      <path d="M35,50 Q25,40 37,35 Q45,25 53,35 Q65,40 55,50 Z" />
+      <path d="M55,45 Q65,35 70,45 Q75,55 65,60 Z" />
+      <path d="M45,30 Q40,22 50,25 Q60,28 55,38 Z" />
     </g>
 
     {/* Bucket */}
