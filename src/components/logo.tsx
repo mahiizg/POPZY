@@ -64,12 +64,12 @@ const Logo = ({ className }: { className?: string }) => {
 
   return (
     <Link href="/" className={cn('flex items-center', className)}>
-      <div className={cn("font-bold uppercase text-5xl text-foreground flex items-center transition-all duration-300",
-        state === 'collapsed' ? 'text-2xl' : 'text-5xl'
+      <div className={cn("font-bold uppercase text-4xl text-foreground flex items-center transition-all duration-300",
+        state === 'collapsed' ? 'text-xl' : 'text-4xl'
       )}>
         <span className={cn("tracking-tighter", state === 'collapsed' ? 'hidden' : 'inline')}>P</span>
-        <PopcornIcon className={cn("transition-all duration-300", state === 'collapsed' ? "w-[2.2rem] h-[2.2rem] -ml-0" : "w-[3.2rem] h-[3.2rem] -ml-4")} />
-        <span className={cn("tracking-tighter", state === 'collapsed' ? 'hidden' : 'inline', '-ml-3')}>PZY</span>
+        <PopcornIcon className={cn("transition-all duration-300", state === 'collapsed' ? "w-[1.8rem] h-[1.8rem] -ml-0" : "w-[2.5rem] h-[2.5rem] -ml-2.5")} />
+        <span className={cn("tracking-tighter", state === 'collapsed' ? 'hidden' : 'inline', '-ml-2')}>PZY</span>
       </div>
     </Link>
   );
