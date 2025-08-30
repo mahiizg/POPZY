@@ -90,7 +90,7 @@ export default function BrowsePage() {
   return (
     <SidebarProvider defaultOpen={true}>
       <Sidebar collapsible="icon">
-        <SidebarHeader>
+        <SidebarHeader className="md:hidden">
           <Logo />
         </SidebarHeader>
         <SidebarContent>
