@@ -34,7 +34,7 @@ const Logo = ({ className }: { className?: string }) => {
     <Link href="/" className={cn('flex items-center', className)}>
       <div className="font-bold uppercase text-3xl tracking-wider text-foreground flex items-center">
         <span>P</span>
-        <PopcornIcon className="w-8 h-8 mx-[-2px]" />
+        <PopcornIcon className="w-10 h-10 mx-[-4px]" />
         <span>PZY</span>
       </div>
     </Link>
