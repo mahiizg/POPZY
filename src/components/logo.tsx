@@ -32,9 +32,9 @@ const PopcornIcon = (props: React.SVGProps<SVGSVGElement>) => (
 const Logo = ({ className }: { className?: string }) => {
   return (
     <Link href="/" className={cn('flex items-center', className)}>
-      <div className="font-bold uppercase text-3xl tracking-wider text-foreground flex items-center">
+      <div className="font-bold uppercase text-5xl tracking-wider text-foreground flex items-center">
         <span>P</span>
-        <PopcornIcon className="w-10 h-10 mx-[-4px]" />
+        <PopcornIcon className="w-12 h-12 mx-[-4px]" />
         <span>PZY</span>
       </div>
     </Link>
