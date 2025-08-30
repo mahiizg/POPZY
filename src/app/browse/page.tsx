@@ -32,7 +32,7 @@ export default function BrowsePage() {
       if (storedHistory) {
         setViewingHistory(JSON.parse(storedHistory));
       }
-    } catch (error) => {
+    } catch (error) {
       console.error("Failed to parse viewing history from localStorage", error);
       setViewingHistory([]);
     }
