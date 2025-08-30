@@ -1,10 +1,17 @@
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const Logo = ({ className }: { className?: string }) => {
   return (
-    <Link href="/" className={cn('text-3xl font-bold text-foreground tracking-tighter', className)}>
-      Popzy
+    <Link href="/" className={cn('flex items-center', className)}>
+      <Image
+        src="/popzy.svg"
+        alt="Popzy"
+        width={90}
+        height={30}
+        className="h-auto w-auto"
+      />
     </Link>
   );
 };
