@@ -72,7 +72,6 @@
       -45deg,
       hsl(var(--primary)),
       hsl(216 33% 5%),
-      hsl(240 100% 25%),
       hsl(45 88% 55%)
     );
     background-size: 400% 400%;
