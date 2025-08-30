@@ -48,7 +48,7 @@ export function ContentCard({ content, onMarkAsWatched, isWatched }: ContentCard
           ))}
         </div>
       </CardContent>
-      <CardFooter className="p-4 pt-0 grid grid-cols-2 gap-2">
+      <CardFooter className="p-4 pt-0 flex flex-col gap-2">
         <ContentDetailsDialog content={content}>
            <Button variant="outline" className="w-full">
              <Info className="mr-2 h-4 w-4" />
@@ -61,7 +61,7 @@ export function ContentCard({ content, onMarkAsWatched, isWatched }: ContentCard
           className="w-full"
         >
           <Eye className="mr-2 h-4 w-4" />
-          {isWatched ? 'Watched' : 'Watch'}
+          {isWatched ? 'Watched' : 'Watch Now'}
         </Button>
       </CardFooter>
     </Card>
