@@ -5,24 +5,26 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Header from '@/components/header';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Input } from '@/components/ui/input';
-import { Popcorn, Ticket, ShoppingCart, Minus, Plus } from 'lucide-react';
+import { Popcorn, ShoppingCart, Minus, Plus } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { cn } from '@/lib/utils';
 
 const popcornOptions = [
-  { id: 'salted-caramel', name: 'Salted Caramel', price: 650 },
-  { id: 'cheddar-cheese', name: 'Cheddar Cheese', price: 550 },
-  { id: 'classic-butter', name: 'Classic Butter', price: 450 },
+  { id: 'salted-caramel', name: 'Salted Caramel', price: 350, imageUrl: 'https://picsum.photos/200/200?random=1', imageHint: 'caramel popcorn' },
+  { id: 'cheddar-cheese', name: 'Cheddar Cheese', price: 300, imageUrl: 'https://picsum.photos/200/200?random=2', imageHint: 'cheese popcorn' },
+  { id: 'classic-butter', name: 'Classic Butter', price: 250, imageUrl: 'https://picsum.photos/200/200?random=3', imageHint: 'buttered popcorn' },
 ];
 
 const drinkOptions = [
-    { id: 'coke', name: 'Coke', price: 150 },
-    { id: 'pepsi', name: 'Pepsi', price: 150 },
-    { id: 'sprite', name: 'Sprite', price: 150 },
+    { id: 'coke', name: 'Coke', price: 120, imageUrl: 'https://picsum.photos/200/200?random=4', imageHint: 'soda can' },
+    { id: 'pepsi', name: 'Pepsi', price: 120, imageUrl: 'https://picsum.photos/200/200?random=5', imageHint: 'soda can' },
+    { id: 'sprite', name: 'Sprite', price: 120, imageUrl: 'https://picsum.photos/200/200?random=6', imageHint: 'soda can' },
 ]
 
 export default function OrderPopcornPage() {
@@ -91,78 +93,117 @@ export default function OrderPopcornPage() {
               <h1 className="text-4xl font-bold">Order Popcorn & Snacks</h1>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Choose Your Popcorn</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <RadioGroup value={selectedPopcorn || ""} onValueChange={setSelectedPopcorn}>
-                    {popcornOptions.map((popcorn) => (
-                      <div key={popcorn.id} className="flex items-center justify-between">
-                        <Label htmlFor={popcorn.id} className="flex items-center gap-2 cursor-pointer">
-                          <RadioGroupItem value={popcorn.id} id={popcorn.id} />
-                          {popcorn.name}
-                        </Label>
-                        <span className="font-semibold">₹{popcorn.price.toFixed(2)}</span>
-                      </div>
-                    ))}
-                  </RadioGroup>
-                  {selectedPopcorn && (
-                    <div className="flex items-center gap-4 mt-4">
-                        <Label>Quantity</Label>
-                        <div className='flex items-center gap-2'>
-                            <Button variant="outline" size="icon" onClick={() => setPopcornQuantity(Math.max(1, popcornQuantity - 1))}><Minus className="h-4 w-4"/></Button>
-                            <Input type="number" value={popcornQuantity} readOnly className="w-16 text-center" />
-                            <Button variant="outline" size="icon" onClick={() => setPopcornQuantity(popcornQuantity + 1)}><Plus className="h-4 w-4"/></Button>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className='lg:col-span-2'>
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Choose Your Popcorn</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <RadioGroup value={selectedPopcorn || ""} onValueChange={setSelectedPopcorn} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {popcornOptions.map((popcorn) => (
+                        <div key={popcorn.id}>
+                          <RadioGroupItem value={popcorn.id} id={popcorn.id} className="peer sr-only" />
+                          <Label 
+                            htmlFor={popcorn.id} 
+                            className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary cursor-pointer"
+                          >
+                            <Image src={popcorn.imageUrl} alt={popcorn.name} width={100} height={100} className="rounded-full mb-4 object-cover aspect-square" data-ai-hint={popcorn.imageHint}/>
+                            <span className="font-bold text-center">{popcorn.name}</span>
+                            <span className="text-muted-foreground">₹{popcorn.price.toFixed(2)}</span>
+                          </Label>
                         </div>
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Choose Your Drink</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <RadioGroup value={selectedDrink || ""} onValueChange={setSelectedDrink}>
-                    {drinkOptions.map((drink) => (
-                      <div key={drink.id} className="flex items-center justify-between">
-                        <Label htmlFor={drink.id} className="flex items-center gap-2 cursor-pointer">
-                          <RadioGroupItem value={drink.id} id={drink.id} />
-                          {drink.name}
-                        </Label>
-                        <span className="font-semibold">₹{drink.price.toFixed(2)}</span>
+                      ))}
+                    </RadioGroup>
+                    {selectedPopcorn && (
+                      <div className="flex items-center justify-center gap-4 mt-6">
+                          <Label>Quantity</Label>
+                          <div className='flex items-center gap-2'>
+                              <Button variant="outline" size="icon" onClick={() => setPopcornQuantity(Math.max(1, popcornQuantity - 1))}><Minus className="h-4 w-4"/></Button>
+                              <Input type="number" value={popcornQuantity} readOnly className="w-16 text-center" />
+                              <Button variant="outline" size="icon" onClick={() => setPopcornQuantity(popcornQuantity + 1)}><Plus className="h-4 w-4"/></Button>
+                          </div>
                       </div>
-                    ))}
-                  </RadioGroup>
-                  {selectedDrink && (
-                    <div className="flex items-center gap-4 mt-4">
-                        <Label>Quantity</Label>
-                        <div className='flex items-center gap-2'>
-                            <Button variant="outline" size="icon" onClick={() => setDrinkQuantity(Math.max(1, drinkQuantity - 1))}><Minus className="h-4 w-4"/></Button>
-                            <Input type="number" value={drinkQuantity} readOnly className="w-16 text-center" />
-                            <Button variant="outline" size="icon" onClick={() => setDrinkQuantity(drinkQuantity + 1)}><Plus className="h-4 w-4"/></Button>
+                    )}
+                  </CardContent>
+                </Card>
+
+                <Card className='mt-8'>
+                  <CardHeader>
+                    <CardTitle>Choose Your Drink</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <RadioGroup value={selectedDrink || ""} onValueChange={setSelectedDrink} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {drinkOptions.map((drink) => (
+                         <div key={drink.id}>
+                          <RadioGroupItem value={drink.id} id={drink.id} className="peer sr-only" />
+                          <Label 
+                            htmlFor={drink.id} 
+                            className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary cursor-pointer"
+                          >
+                            <Image src={drink.imageUrl} alt={drink.name} width={100} height={100} className="rounded-full mb-4 object-cover aspect-square" data-ai-hint={drink.imageHint}/>
+                            <span className="font-bold text-center">{drink.name}</span>
+                            <span className="text-muted-foreground">₹{drink.price.toFixed(2)}</span>
+                          </Label>
                         </div>
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
+                      ))}
+                    </RadioGroup>
+                    {selectedDrink && (
+                       <div className="flex items-center justify-center gap-4 mt-6">
+                          <Label>Quantity</Label>
+                          <div className='flex items-center gap-2'>
+                              <Button variant="outline" size="icon" onClick={() => setDrinkQuantity(Math.max(1, drinkQuantity - 1))}><Minus className="h-4 w-4"/></Button>
+                              <Input type="number" value={drinkQuantity} readOnly className="w-16 text-center" />
+                              <Button variant="outline" size="icon" onClick={() => setDrinkQuantity(drinkQuantity + 1)}><Plus className="h-4 w-4"/></Button>
+                          </div>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className='lg:col-span-1'>
+                <Card className="sticky top-24">
+                    <CardHeader>
+                      <CardTitle>Your Order</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex flex-col gap-4">
+                        {selectedPopcorn && popcornOptions.find(p => p.id === selectedPopcorn) &&
+                           <div className='flex justify-between items-center'>
+                                <div>
+                                    <p className='font-semibold'>{popcornOptions.find(p => p.id === selectedPopcorn)?.name}</p>
+                                    <p className='text-sm text-muted-foreground'>Quantity: {popcornQuantity}</p>
+                                </div>
+                                <p>₹{(popcornOptions.find(p => p.id === selectedPopcorn)!.price * popcornQuantity).toFixed(2)}</p>
+                           </div>
+                        }
+                        {selectedDrink && drinkOptions.find(d => d.id === selectedDrink) &&
+                           <div className='flex justify-between items-center'>
+                                <div>
+                                    <p className='font-semibold'>{drinkOptions.find(d => d.id === selectedDrink)?.name}</p>
+                                    <p className='text-sm text-muted-foreground'>Quantity: {drinkQuantity}</p>
+                                </div>
+                                <p>₹{(drinkOptions.find(d => d.id === selectedDrink)!.price * drinkQuantity).toFixed(2)}</p>
+                           </div>
+                        }
+                        {total === 0 && <p className='text-muted-foreground text-center py-8'>Your cart is empty.</p>}
+                    </CardContent>
+                    {total > 0 && 
+                      <CardFooter className="p-6 flex flex-col items-stretch gap-4 border-t">
+                          <div className="flex justify-between font-bold text-lg">
+                              <p>Total</p>
+                              <p>₹{total.toFixed(2)}</p>
+                          </div>
+                          <Button size="lg" onClick={handlePlaceOrder}>
+                              <ShoppingCart className="mr-2 h-5 w-5" />
+                              Proceed to Checkout
+                          </Button>
+                      </CardFooter>
+                    }
+                </Card>
+              </div>
             </div>
             
-            <Card className="mt-8">
-                <CardContent className="p-6 flex items-center justify-between">
-                    <div>
-                        <p className="text-lg font-semibold">Total</p>
-                        <p className="text-3xl font-bold">₹{total.toFixed(2)}</p>
-                    </div>
-                    <Button size="lg" onClick={handlePlaceOrder}>
-                        <ShoppingCart className="mr-2 h-5 w-5" />
-                        Place Order
-                    </Button>
-                </CardContent>
-            </Card>
-
             <div className="mt-8 text-center">
               <Button variant="ghost" onClick={() => router.back()}>
                 &larr; Back to Browsing
