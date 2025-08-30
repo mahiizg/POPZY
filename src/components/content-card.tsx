@@ -5,7 +5,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import type { EntertainmentContent } from '@/lib/types';
-import { Eye, Star, Info } from 'lucide-react';
+import { Eye, Star, Info, Film, Tv } from 'lucide-react';
 import { ContentDetailsDialog } from './content-details-dialog';
 
 interface ContentCardProps {
@@ -26,9 +26,17 @@ export function ContentCard({ content, onMarkAsWatched, isWatched }: ContentCard
           className="w-full h-48 object-cover"
           data-ai-hint={content.imageHint}
         />
-        <div className="absolute top-2 right-2 flex items-center gap-2 bg-black/60 text-white p-1.5 rounded-md text-xs font-semibold backdrop-blur-sm">
-          <Star className="w-3 h-3 text-yellow-400 fill-current" />
-          <span>{content.imdbRating}</span>
+         <div className="absolute top-2 right-2 flex items-center gap-2 bg-black/60 text-white p-1.5 rounded-md text-xs font-semibold backdrop-blur-sm">
+            <div className="flex items-center gap-1">
+                <div className="w-4 h-4 bg-[#F5C518] rounded-sm flex items-center justify-center">
+                    <span className="text-black text-[10px] font-bold">IMDb</span>
+                </div>
+                <span>{content.imdbRating.toFixed(1)}</span>
+            </div>
+            <div className="flex items-center gap-1">
+                 <Film className="w-3 h-3 text-red-500 fill-current" />
+                <span>{content.rottenTomatoesRating}%</span>
+            </div>
         </div>
       </CardHeader>
       <CardContent className="p-4 flex-1">

@@ -1,3 +1,4 @@
+'use client';
 export type Category = "webseries" | "tv show" | "movie";
 
 export type Genre = 
@@ -15,4 +16,6 @@ export interface EntertainmentContent {
   rottenTomatoesRating: number;
   imageUrl: string;
   imageHint: string;
+  languages: string[];
+  subtitles: string[];
 }

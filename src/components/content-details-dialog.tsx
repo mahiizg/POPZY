@@ -13,7 +13,7 @@ import type { EntertainmentContent } from '@/lib/types';
 import Image from 'next/image';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
-import { Share2, Link as LinkIcon, Twitter, Facebook, Cherry } from 'lucide-react';
+import { Share2, Link as LinkIcon, Twitter, Facebook, Cherry, Languages, Captions } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 function SocialSharePopover({ content }: { content: EntertainmentContent }) {
@@ -116,6 +116,20 @@ export function ContentDetailsDialog({
                 <div className="flex items-center gap-2">
                     <Cherry className="w-6 h-6 text-red-600 fill-current" />
                     <span className="font-bold text-lg text-foreground">{content.rottenTomatoesRating}%</span>
+                </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4 my-4">
+                <div>
+                    <h4 className="font-semibold flex items-center gap-2 mb-2"><Languages/> Languages</h4>
+                    <div className="flex flex-wrap gap-2">
+                    {content.languages.map(lang => <Badge key={lang} variant="secondary">{lang}</Badge>)}
+                    </div>
+                </div>
+                <div>
+                    <h4 className="font-semibold flex items-center gap-2 mb-2"><Captions/> Subtitles</h4>
+                    <div className="flex flex-wrap gap-2">
+                    {content.subtitles.map(sub => <Badge key={sub} variant="secondary">{sub}</Badge>)}
+                    </div>
                 </div>
             </div>
              <div className="mt-auto pt-6">

@@ -18,6 +18,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 86,
     imageUrl: 'https://picsum.photos/400/600?random=1',
     imageHint: 'man suit',
+    languages: ['English', 'Russian'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'action-movie-2',
@@ -29,6 +31,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 97,
     imageUrl: 'https://picsum.photos/400/600?random=2',
     imageHint: 'desert car',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'German'],
   },
   {
     id: 'action-movie-3',
@@ -40,6 +44,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 94,
     imageUrl: 'https://picsum.photos/400/600?random=3',
     imageHint: 'dark city',
+    languages: ['English'],
+    subtitles: ['English', 'French', 'Chinese'],
   },
   {
     id: 'action-movie-4',
@@ -51,6 +57,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 79,
     imageUrl: 'https://picsum.photos/400/600?random=4',
     imageHint: 'roman warrior',
+    languages: ['English'],
+    subtitles: ['English', 'Italian', 'Latin'],
   },
   {
     id: 'action-movie-5',
@@ -62,6 +70,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 94,
     imageUrl: 'https://picsum.photos/400/600?random=5',
     imageHint: 'building explosion',
+    languages: ['English', 'German'],
+    subtitles: ['English', 'German', 'Japanese'],
   },
   {
     id: 'action-movie-6',
@@ -73,6 +83,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 87,
     imageUrl: 'https://picsum.photos/400/600?random=6',
     imageHint: 'intense fight',
+    languages: ['Indonesian'],
+    subtitles: ['English', 'Indonesian'],
   },
   {
     id: 'action-movie-7',
@@ -84,6 +96,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 97,
     imageUrl: 'https://picsum.photos/400/600?random=7',
     imageHint: 'helicopter chase',
+    languages: ['English', 'French'],
+    subtitles: ['English', 'French', 'Spanish'],
   },
   {
     id: 'action-movie-8',
@@ -95,6 +109,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 87,
     imageUrl: 'https://picsum.photos/400/600?random=8',
     imageHint: 'cityscape folding',
+    languages: ['English', 'Japanese', 'French'],
+    subtitles: ['English', 'Spanish', 'Chinese'],
   },
   {
     id: 'action-movie-9',
@@ -106,6 +122,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 94,
     imageUrl: 'https://picsum.photos/400/600?random=9',
     imageHint: 'superhero team',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'action-movie-10',
@@ -117,6 +135,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 96,
     imageUrl: 'https://picsum.photos/400/600?random=10',
     imageHint: 'african king',
+    languages: ['English', 'Xhosa'],
+    subtitles: ['English', 'Xhosa', 'French'],
   },
   {
     id: 'action-movie-11',
@@ -128,6 +148,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 83,
     imageUrl: 'https://picsum.photos/400/600?random=11',
     imageHint: 'digital code',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'German'],
   },
   {
     id: 'action-movie-12',
@@ -139,6 +161,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 92,
     imageUrl: 'https://picsum.photos/400/600?random=12',
     imageHint: 'spy silhouette',
+    languages: ['English', 'Turkish', 'Mandarin'],
+    subtitles: ['English', 'French', 'Spanish'],
   },
   {
     id: 'action-movie-13',
@@ -150,6 +174,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 85,
     imageUrl: 'https://picsum.photos/400/600?random=13',
     imageHint: 'sword fight',
+    languages: ['English', 'Japanese'],
+    subtitles: ['English', 'Japanese', 'Spanish'],
   },
   {
     id: 'action-movie-14',
@@ -161,6 +187,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 89,
     imageUrl: 'https://picsum.photos/400/600?random=14',
     imageHint: 'epic waterfall',
+    languages: ['Telugu', 'Tamil'],
+    subtitles: ['English', 'Hindi'],
   },
   {
     id: 'action-movie-15',
@@ -172,6 +200,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 88,
     imageUrl: 'https://picsum.photos/400/600?random=15',
     imageHint: 'ancient kingdom',
+    languages: ['Telugu', 'Tamil'],
+    subtitles: ['English', 'Hindi'],
   },
   {
     id: 'action-movie-16',
@@ -183,6 +213,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 95,
     imageUrl: 'https://picsum.photos/400/600?random=16',
     imageHint: 'two heroes',
+    languages: ['Telugu'],
+    subtitles: ['English', 'Hindi', 'Tamil'],
   },
   {
     id: 'action-movie-17',
@@ -194,6 +226,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 86,
     imageUrl: 'https://picsum.photos/400/600?random=17',
     imageHint: 'gold fields',
+    languages: ['Kannada'],
+    subtitles: ['English', 'Hindi', 'Telugu'],
   },
   {
     id: 'action-movie-18',
@@ -205,6 +239,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 80,
     imageUrl: 'https://picsum.photos/400/600?random=18',
     imageHint: 'soldier portrait',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'action-movie-19',
@@ -216,6 +252,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 71,
     imageUrl: 'https://picsum.photos/400/600?random=19',
     imageHint: 'car chase',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'action-movie-20',
@@ -227,6 +265,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 67,
     imageUrl: 'https://picsum.photos/400/600?random=20',
     imageHint: 'mercenary action',
+    languages: ['English', 'Hindi', 'Bengali'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'action-webseries-1',
@@ -238,6 +278,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 97,
     imageUrl: 'https://picsum.photos/400/600?random=21',
     imageHint: 'superhero group',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'action-webseries-2',
@@ -249,6 +291,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 92,
     imageUrl: 'https://picsum.photos/400/600?random=22',
     imageHint: 'masked vigilante',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'action-webseries-3',
@@ -260,6 +304,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 86,
     imageUrl: 'https://picsum.photos/400/600?random=23',
     imageHint: 'archer hero',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'action-webseries-4',
@@ -271,6 +317,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 64,
     imageUrl: 'https://picsum.photos/400/600?random=24',
     imageHint: 'dark vigilante',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'action-webseries-5',
@@ -282,6 +330,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 92,
     imageUrl: 'https://picsum.photos/400/600?random=25',
     imageHint: 'kids bikes',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'action-webseries-6',
@@ -293,6 +343,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 94,
     imageUrl: 'https://picsum.photos/400/600?random=26',
     imageHint: 'red jumpsuits',
+    languages: ['Spanish'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'action-webseries-7',
@@ -304,6 +356,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 71,
     imageUrl: 'https://picsum.photos/400/600?random=27',
     imageHint: 'cia analyst',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'action-webseries-8',
@@ -315,6 +369,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 92,
     imageUrl: 'https://picsum.photos/400/600?random=28',
     imageHint: 'tall man',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'action-webseries-9',
@@ -326,6 +382,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 88,
     imageUrl: 'https://picsum.photos/400/600?random=29',
     imageHint: 'ticking clock',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'action-webseries-10',
@@ -337,6 +395,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 93,
     imageUrl: 'https://picsum.photos/400/600?random=30',
     imageHint: 'viking ship',
+    languages: ['English', 'Old Norse'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'action-webseries-11',
@@ -348,6 +408,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 89,
     imageUrl: 'https://picsum.photos/400/600?random=31',
     imageHint: 'iron throne',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'action-webseries-12',
@@ -359,6 +421,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 81,
     imageUrl: 'https://picsum.photos/400/600?random=32',
     imageHint: 'monster hunter',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'action-webseries-13',
@@ -370,6 +434,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 93,
     imageUrl: 'https://picsum.photos/400/600?random=33',
     imageHint: 'man cap',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'action-webseries-14',
@@ -381,6 +447,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 93,
     imageUrl: 'https://picsum.photos/400/600?random=34',
     imageHint: 'bounty hunter',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'action-webseries-15',
@@ -392,6 +460,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 89,
     imageUrl: 'https://picsum.photos/400/600?random=35',
     imageHint: 'superhero duo',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'action-webseries-16',
@@ -403,6 +473,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 92,
     imageUrl: 'https://picsum.photos/400/600?random=36',
     imageHint: 'god mischief',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'action-webseries-17',
@@ -414,6 +486,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 92,
     imageUrl: 'https://picsum.photos/400/600?random=37',
     imageHint: 'archer christmas',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'action-webseries-18',
@@ -425,6 +499,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 91,
     imageUrl: 'https://picsum.photos/400/600?random=38',
     imageHint: 'retro television',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'action-webseries-19',
@@ -436,6 +512,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 80,
     imageUrl: 'https://picsum.photos/400/600?random=39',
     imageHint: 'indian spy',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'action-webseries-20',
@@ -447,6 +525,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 75,
     imageUrl: 'https://picsum.photos/400/600?random=40',
     imageHint: 'man desert',
+    languages: ['Hindi', 'English'],
+    subtitles: ['English'],
   },
 
   // Comedy
@@ -460,6 +540,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 79,
     imageUrl: 'https://picsum.photos/400/600?random=41',
     imageHint: 'las vegas',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-movie-2',
@@ -471,6 +553,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 88,
     imageUrl: 'https://picsum.photos/400/600?random=42',
     imageHint: 'teen party',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-movie-3',
@@ -482,6 +566,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 55,
     imageUrl: 'https://picsum.photos/400/600?random=43',
     imageHint: 'two men',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-movie-4',
@@ -493,6 +579,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 68,
     imageUrl: 'https://picsum.photos/400/600?random=44',
     imageHint: 'funny car',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-movie-5',
@@ -504,6 +592,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 91,
     imageUrl: 'https://picsum.photos/400/600?random=45',
     imageHint: 'man mustache',
+    languages: ['English', 'Kazakh'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-movie-6',
@@ -515,6 +605,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 82,
     imageUrl: 'https://picsum.photos/400/600?random=46',
     imageHint: 'jungle explosion',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-movie-7',
@@ -526,6 +618,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 66,
     imageUrl: 'https://picsum.photos/400/600?random=47',
     imageHint: 'news team',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-movie-8',
@@ -537,6 +631,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 90,
     imageUrl: 'https://picsum.photos/400/600?random=48',
     imageHint: 'women dresses',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-movie-9',
@@ -548,6 +644,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 61,
     imageUrl: 'https://picsum.photos/400/600?random=49',
     imageHint: 'teenagers party',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-movie-10',
@@ -559,6 +657,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 65,
     imageUrl: 'https://picsum.photos/400/600?random=50',
     imageHint: 'fashion model',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-movie-11',
@@ -570,6 +670,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 86,
     imageUrl: 'https://picsum.photos/400/600?random=51',
     imageHint: 'indian court',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'comedy-movie-12',
@@ -581,6 +683,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 90,
     imageUrl: 'https://picsum.photos/400/600?random=52',
     imageHint: 'man hug',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'comedy-movie-13',
@@ -592,6 +696,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 88,
     imageUrl: 'https://picsum.photos/400/600?random=53',
     imageHint: 'man radio',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'comedy-movie-14',
@@ -603,6 +709,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 92,
     imageUrl: 'https://picsum.photos/400/600?random=54',
     imageHint: 'three men',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'comedy-movie-15',
@@ -614,6 +722,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 80,
     imageUrl: 'https://picsum.photos/400/600?random=55',
     imageHint: 'haunted palace',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'comedy-movie-16',
@@ -625,6 +735,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 100,
     imageUrl: 'https://picsum.photos/400/600?random=56',
     imageHint: 'college friends',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'comedy-movie-17',
@@ -636,6 +748,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 75,
     imageUrl: 'https://picsum.photos/400/600?random=57',
     imageHint: 'four friends',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'comedy-movie-18',
@@ -647,6 +761,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 83,
     imageUrl: 'https://picsum.photos/400/600?random=58',
     imageHint: 'hostel life',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'comedy-movie-19',
@@ -658,6 +774,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 79,
     imageUrl: 'https://picsum.photos/400/600?random=59',
     imageHint: 'scary woman',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'comedy-movie-20',
@@ -669,6 +787,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 70,
     imageUrl: 'https://picsum.photos/400/600?random=60',
     imageHint: 'gangster family',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'comedy-webseries-1',
@@ -680,6 +800,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 81,
     imageUrl: 'https://picsum.photos/400/600?random=61',
     imageHint: 'office party',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-webseries-2',
@@ -691,6 +813,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 90,
     imageUrl: 'https://picsum.photos/400/600?random=62',
     imageHint: 'boring office',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-webseries-3',
@@ -702,6 +826,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 93,
     imageUrl: 'https://picsum.photos/400/600?random=63',
     imageHint: 'government building',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-webseries-4',
@@ -713,6 +839,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 95,
     imageUrl: 'https://picsum.photos/400/600?random=64',
     imageHint: 'police precinct',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-webseries-5',
@@ -724,6 +852,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 78,
     imageUrl: 'https://picsum.photos/400/600?random=65',
     imageHint: 'coffee shop',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-webseries-6',
@@ -735,6 +865,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 84,
     imageUrl: 'https://picsum.photos/400/600?random=66',
     imageHint: 'group bar',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-webseries-7',
@@ -746,6 +878,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 89,
     imageUrl: 'https://picsum.photos/400/600?random=67',
     imageHint: 'apartment living',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-webseries-8',
@@ -757,6 +891,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 81,
     imageUrl: 'https://picsum.photos/400/600?random=68',
     imageHint: 'nerdy friends',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-webseries-9',
@@ -768,6 +904,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 85,
     imageUrl: 'https://picsum.photos/400/600?random=69',
     imageHint: 'large family',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-webseries-10',
@@ -779,6 +917,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 88,
     imageUrl: 'https://picsum.photos/400/600?random=70',
     imageHint: 'study group',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-webseries-11',
@@ -790,6 +930,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 89,
     imageUrl: 'https://picsum.photos/400/600?random=71',
     imageHint: 'vintage microphone',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-webseries-12',
@@ -801,6 +943,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 92,
     imageUrl: 'https://picsum.photos/400/600?random=72',
     imageHint: 'soccer coach',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-webseries-13',
@@ -812,6 +956,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 100,
     imageUrl: 'https://picsum.photos/400/600?random=73',
     imageHint: 'hotel lobby',
+    languages: ['English', 'Spanish'],
+    subtitles: ['English'],
   },
   {
     id: 'comedy-webseries-14',
@@ -823,6 +969,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 94,
     imageUrl: 'https://picsum.photos/400/600?random=74',
     imageHint: 'messy office',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-webseries-15',
@@ -834,6 +982,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 100,
     imageUrl: 'https://picsum.photos/400/600?random=75',
     imageHint: 'woman talking',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'comedy-webseries-16',
@@ -845,6 +995,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 95,
     imageUrl: 'https://picsum.photos/400/600?random=76',
     imageHint: 'indian village',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'comedy-webseries-17',
@@ -856,6 +1008,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 96,
     imageUrl: 'https://picsum.photos/400/600?random=77',
     imageHint: 'indian family',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'comedy-webseries-18',
@@ -867,6 +1021,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 97,
     imageUrl: 'https://picsum.photos/400/600?random=78',
     imageHint: 'startup office',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'comedy-webseries-19',
@@ -878,6 +1034,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 95,
     imageUrl: 'https://picsum.photos/400/600?random=79',
     imageHint: 'student classroom',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'comedy-webseries-20',
@@ -889,6 +1047,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 94,
     imageUrl: 'https://picsum.photos/400/600?random=80',
     imageHint: 'young couple',
+    languages: ['Hindi', 'English'],
+    subtitles: ['English'],
   },
 
   // Romance
@@ -902,6 +1062,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 53,
     imageUrl: 'https://picsum.photos/400/600?random=81',
     imageHint: 'couple kissing',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-movie-2',
@@ -913,6 +1075,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 88,
     imageUrl: 'https://picsum.photos/400/600?random=82',
     imageHint: 'ship deck',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-movie-3',
@@ -924,6 +1088,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 87,
     imageUrl: 'https://picsum.photos/400/600?random=83',
     imageHint: 'vintage couple',
+    languages: ['English'],
+    subtitles: ['English', 'French'],
   },
   {
     id: 'romance-movie-4',
@@ -935,6 +1101,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 27,
     imageUrl: 'https://picsum.photos/400/600?random=84',
     imageHint: 'couple walking',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-movie-5',
@@ -946,6 +1114,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 91,
     imageUrl: 'https://picsum.photos/400/600?random=85',
     imageHint: 'couple dancing',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-movie-6',
@@ -957,6 +1127,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 92,
     imageUrl: 'https://picsum.photos/400/600?random=86',
     imageHint: 'frozen lake',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-movie-7',
@@ -968,6 +1140,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 85,
     imageUrl: 'https://picsum.photos/400/600?random=87',
     imageHint: 'couple park',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-movie-8',
@@ -979,6 +1153,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 84,
     imageUrl: 'https://picsum.photos/400/600?random=88',
     imageHint: 'london street',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-movie-9',
@@ -990,6 +1166,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 65,
     imageUrl: 'https://picsum.photos/400/600?random=89',
     imageHint: 'woman red-dress',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-movie-10',
@@ -1001,6 +1179,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 94,
     imageUrl: 'https://picsum.photos/400/600?random=90',
     imageHint: 'summer italy',
+    languages: ['English', 'Italian', 'French'],
+    subtitles: ['English', 'Italian', 'French'],
   },
   {
     id: 'romance-movie-11',
@@ -1012,6 +1192,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 91,
     imageUrl: 'https://picsum.photos/400/600?random=91',
     imageHint: 'indian couple',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'romance-movie-12',
@@ -1023,6 +1205,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 95,
     imageUrl: 'https://picsum.photos/400/600?random=92',
     imageHint: 'train scene',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'romance-movie-13',
@@ -1034,6 +1218,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 75,
     imageUrl: 'https://picsum.photos/400/600?random=93',
     imageHint: 'man violin',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'romance-movie-14',
@@ -1045,6 +1231,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 78,
     imageUrl: 'https://picsum.photos/400/600?random=94',
     imageHint: 'holi festival',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'romance-movie-15',
@@ -1056,6 +1244,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 50,
     imageUrl: 'https://picsum.photos/400/600?random=95',
     imageHint: 'sad couple',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'romance-movie-16',
@@ -1067,6 +1257,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 85,
     imageUrl: 'https://picsum.photos/400/600?random=96',
     imageHint: 'couple train',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'romance-movie-17',
@@ -1078,6 +1270,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 77,
     imageUrl: 'https://picsum.photos/400/600?random=97',
     imageHint: 'new york',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'romance-movie-18',
@@ -1089,6 +1283,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 29,
     imageUrl: 'https://picsum.photos/400/600?random=98',
     imageHint: 'angry man',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'romance-movie-19',
@@ -1100,6 +1296,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 90,
     imageUrl: 'https://picsum.photos/400/600?random=99',
     imageHint: 'village couple',
+    languages: ['Marathi'],
+    subtitles: ['English', 'Hindi'],
   },
   {
     id: 'romance-movie-20',
@@ -1111,6 +1309,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 65,
     imageUrl: 'https://picsum.photos/400/600?random=100',
     imageHint: 'college romance',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'romance-webseries-1',
@@ -1122,6 +1322,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 89,
     imageUrl: 'https://picsum.photos/400/600?random=101',
     imageHint: 'scottish highlands',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-webseries-2',
@@ -1133,6 +1335,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 82,
     imageUrl: 'https://picsum.photos/400/600?random=102',
     imageHint: 'regency ball',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-webseries-3',
@@ -1144,6 +1348,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 38,
     imageUrl: 'https://picsum.photos/400/600?random=103',
     imageHint: 'couple time',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-webseries-4',
@@ -1155,6 +1361,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 100,
     imageUrl: 'https://picsum.photos/400/600?random=104',
     imageHint: 'woman surprised',
+    languages: ['English', 'Spanish'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-webseries-5',
@@ -1166,6 +1374,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 91,
     imageUrl: 'https://picsum.photos/400/600?random=105',
     imageHint: 'young love',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-webseries-6',
@@ -1177,6 +1387,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 95,
     imageUrl: 'https://picsum.photos/400/600?random=106',
     imageHint: 'high school',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-webseries-7',
@@ -1188,6 +1400,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 100,
     imageUrl: 'https://picsum.photos/400/600?random=107',
     imageHint: 'new york christmas',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-webseries-8',
@@ -1199,6 +1413,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 63,
     imageUrl: 'https://picsum.photos/400/600?random=108',
     imageHint: 'paris fashion',
+    languages: ['English', 'French'],
+    subtitles: ['English', 'French', 'Spanish'],
   },
   {
     id: 'romance-webseries-9',
@@ -1210,6 +1426,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 94,
     imageUrl: 'https://picsum.photos/400/600?random=109',
     imageHint: 'awkward couple',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-webseries-10',
@@ -1221,6 +1439,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 76,
     imageUrl: 'https://picsum.photos/400/600?random=110',
     imageHint: 'love stories',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-webseries-11',
@@ -1232,6 +1452,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 91,
     imageUrl: 'https://picsum.photos/400/600?random=111',
     imageHint: 'man stalking',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-webseries-12',
@@ -1243,6 +1465,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 84,
     imageUrl: 'https://picsum.photos/400/600?random=112',
     imageHint: 'hospital drama',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-webseries-13',
@@ -1254,6 +1478,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 84,
     imageUrl: 'https://picsum.photos/400/600?random=113',
     imageHint: 'rich teenagers',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-webseries-14',
@@ -1265,6 +1491,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 95,
     imageUrl: 'https://picsum.photos/400/600?random=114',
     imageHint: 'high schoolers',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-webseries-15',
@@ -1276,6 +1504,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 93,
     imageUrl: 'https://picsum.photos/400/600?random=115',
     imageHint: 'teenage girl',
+    languages: ['English', 'Tamil'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'romance-webseries-16',
@@ -1287,6 +1517,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 90,
     imageUrl: 'https://picsum.photos/400/600?random=116',
     imageHint: 'mumbai couple',
+    languages: ['Hindi', 'English'],
+    subtitles: ['English'],
   },
   {
     id: 'romance-webseries-17',
@@ -1298,6 +1530,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 70,
     imageUrl: 'https://picsum.photos/400/600?random=117',
     imageHint: 'teen romance',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'romance-webseries-18',
@@ -1309,6 +1543,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 95,
     imageUrl: 'https://picsum.photos/400/600?random=118',
     imageHint: 'cute couple',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'romance-webseries-19',
@@ -1320,6 +1556,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 92,
     imageUrl: 'https://picsum.photos/400/600?random=119',
     imageHint: 'emotional couple',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'romance-webseries-20',
@@ -1331,6 +1569,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 90,
     imageUrl: 'https://picsum.photos/400/600?random=120',
     imageHint: 'college friends',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
 
   // Horror / Thriller
@@ -1344,6 +1584,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 86,
     imageUrl: 'https://picsum.photos/400/600?random=121',
     imageHint: 'haunted house',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-movie-2',
@@ -1355,6 +1597,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 84,
     imageUrl: 'https://picsum.photos/400/600?random=122',
     imageHint: 'possessed girl',
+    languages: ['English', 'Latin'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-movie-3',
@@ -1366,6 +1610,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 90,
     imageUrl: 'https://picsum.photos/400/600?random=123',
     imageHint: 'creepy dollhouse',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-movie-4',
@@ -1377,6 +1623,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 96,
     imageUrl: 'https://picsum.photos/400/600?random=124',
     imageHint: 'silent monster',
+    languages: ['English', 'American Sign Language'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-movie-5',
@@ -1388,6 +1636,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 71,
     imageUrl: 'https://picsum.photos/400/600?random=125',
     imageHint: 'cursed tape',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-movie-6',
@@ -1399,6 +1649,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 82,
     imageUrl: 'https://picsum.photos/400/600?random=126',
     imageHint: 'empty hotel',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-movie-7',
@@ -1410,6 +1662,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 98,
     imageUrl: 'https://picsum.photos/400/600?random=127',
     imageHint: 'man crying',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-movie-8',
@@ -1421,6 +1675,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 67,
     imageUrl: 'https://picsum.photos/400/600?random=128',
     imageHint: 'red demon',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-movie-9',
@@ -1432,6 +1688,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 29,
     imageUrl: 'https://picsum.photos/400/600?random=129',
     imageHint: 'creepy doll',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-movie-10',
@@ -1443,6 +1701,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 86,
     imageUrl: 'https://picsum.photos/400/600?random=130',
     imageHint: 'scary clown',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-movie-11',
@@ -1454,6 +1714,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 96,
     imageUrl: 'https://picsum.photos/400/600?random=131',
     imageHint: 'motel sign',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-movie-12',
@@ -1465,6 +1727,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 96,
     imageUrl: 'https://picsum.photos/400/600?random=132',
     imageHint: 'masked killer',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-movie-13',
@@ -1476,6 +1740,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 94,
     imageUrl: 'https://picsum.photos/400/600?random=133',
     imageHint: 'zombie horde',
+    languages: ['Korean'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-movie-14',
@@ -1487,6 +1753,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 88,
     imageUrl: 'https://picsum.photos/400/600?random=134',
     imageHint: 'ancient ruin',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'horror-movie-15',
@@ -1498,6 +1766,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 79,
     imageUrl: 'https://picsum.photos/400/600?random=135',
     imageHint: 'ghostly woman',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'horror-movie-16',
@@ -1509,6 +1779,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 64,
     imageUrl: 'https://picsum.photos/400/600?random=136',
     imageHint: 'scared woman',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'horror-movie-17',
@@ -1520,6 +1792,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 60,
     imageUrl: 'https://picsum.photos/400/600?random=137',
     imageHint: 'haunted apartment',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'horror-movie-18',
@@ -1531,6 +1805,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 62,
     imageUrl: 'https://picsum.photos/400/600?random=138',
     imageHint: 'misty forest',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'horror-movie-19',
@@ -1542,6 +1818,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 55,
     imageUrl: 'https://picsum.photos/400/600?random=139',
     imageHint: 'spooky mansion',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'horror-movie-20',
@@ -1553,6 +1831,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 80,
     imageUrl: 'https://picsum.photos/400/600?random=140',
     imageHint: 'village occult',
+    languages: ['Telugu'],
+    subtitles: ['English', 'Hindi'],
   },
   {
     id: 'horror-webseries-1',
@@ -1564,6 +1844,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 93,
     imageUrl: 'https://picsum.photos/400/600?random=141',
     imageHint: 'gothic mansion',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-webseries-2',
@@ -1575,6 +1857,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 88,
     imageUrl: 'https://picsum.photos/400/600?random=142',
     imageHint: 'creepy lake',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-webseries-3',
@@ -1586,6 +1870,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 87,
     imageUrl: 'https://picsum.photos/400/600?random=143',
     imageHint: 'island church',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-webseries-4',
@@ -1597,6 +1883,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 80,
     imageUrl: 'https://picsum.photos/400/600?random=144',
     imageHint: 'zombie apocalypse',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-webseries-5',
@@ -1608,6 +1896,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 77,
     imageUrl: 'https://picsum.photos/400/600?random=145',
     imageHint: 'creepy poster',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-webseries-6',
@@ -1619,6 +1909,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 92,
     imageUrl: 'https://picsum.photos/400/600?random=146',
     imageHint: 'kids on bikes',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-webseries-7',
@@ -1630,6 +1922,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 95,
     imageUrl: 'https://picsum.photos/400/600?random=147',
     imageHint: 'dark forest',
+    languages: ['German'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-webseries-8',
@@ -1641,6 +1935,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 93,
     imageUrl: 'https://picsum.photos/400/600?random=148',
     imageHint: 'classic car',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-webseries-9',
@@ -1652,6 +1948,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 71,
     imageUrl: 'https://picsum.photos/400/600?random=149',
     imageHint: 'vampire castle',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-webseries-10',
@@ -1663,6 +1961,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 91,
     imageUrl: 'https://picsum.photos/400/600?random=150',
     imageHint: 'victorian london',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-webseries-11',
@@ -1674,6 +1974,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 92,
     imageUrl: 'https://picsum.photos/400/600?random=151',
     imageHint: 'elegant food',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-webseries-12',
@@ -1685,6 +1987,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 72,
     imageUrl: 'https://picsum.photos/400/600?random=152',
     imageHint: 'blood spatter',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-webseries-13',
@@ -1696,6 +2000,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 91,
     imageUrl: 'https://picsum.photos/400/600?random=153',
     imageHint: 'man watching',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-webseries-14',
@@ -1707,6 +2013,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 93,
     imageUrl: 'https://picsum.photos/400/600?random=154',
     imageHint: 'old motel',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-webseries-15',
@@ -1718,6 +2026,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 87,
     imageUrl: 'https://picsum.photos/400/600?random=155',
     imageHint: 'eerie town',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'horror-webseries-16',
@@ -1729,6 +2039,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 60,
     imageUrl: 'https://picsum.photos/400/600?random=156',
     imageHint: 'old typewriter',
+    languages: ['Hindi', 'English'],
+    subtitles: ['English'],
   },
   {
     id: 'horror-webseries-17',
@@ -1740,6 +2052,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 86,
     imageUrl: 'https://picsum.photos/400/600?random=157',
     imageHint: 'dark interrogation',
+    languages: ['Hindi', 'English'],
+    subtitles: ['English'],
   },
   {
     id: 'horror-webseries-18',
@@ -1751,6 +2065,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 62,
     imageUrl: 'https://picsum.photos/400/600?random=158',
     imageHint: 'woman scared',
+    languages: ['Hindi'],
+    subtitles: ['English'],
   },
   {
     id: 'horror-webseries-19',
@@ -1762,6 +2078,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 29,
     imageUrl: 'https://picsum.photos/400/600?random=159',
     imageHint: 'zombie soldier',
+    languages: ['Hindi', 'English'],
+    subtitles: ['English'],
   },
   {
     id: 'horror-webseries-20',
@@ -1773,6 +2091,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 96,
     imageUrl: 'https://picsum.photos/400/600?random=160',
     imageHint: 'post-apocalyptic city',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
 
   // Sci-Fi / Fantasy
@@ -1786,6 +2106,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 73,
     imageUrl: 'https://picsum.photos/400/600?random=161',
     imageHint: 'space travel',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-movie-2',
@@ -1797,6 +2119,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 87,
     imageUrl: 'https://picsum.photos/400/600?random=162',
     imageHint: 'dream city',
+    languages: ['English', 'Japanese', 'French'],
+    subtitles: ['English', 'Spanish', 'Chinese'],
   },
   {
     id: 'scifi-movie-3',
@@ -1808,6 +2132,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 83,
     imageUrl: 'https://picsum.photos/400/600?random=163',
     imageHint: 'green code',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'German'],
   },
   {
     id: 'scifi-movie-4',
@@ -1819,6 +2145,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 88,
     imageUrl: 'https://picsum.photos/400/600?random=164',
     imageHint: 'futuristic car',
+    languages: ['English', 'Japanese'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-movie-5',
@@ -1830,6 +2158,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 93,
     imageUrl: 'https://picsum.photos/400/600?random=165',
     imageHint: 'space battle',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-movie-6',
@@ -1841,6 +2171,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 95,
     imageUrl: 'https://picsum.photos/400/600?random=166',
     imageHint: 'darth vader',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-movie-7',
@@ -1852,6 +2184,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 82,
     imageUrl: 'https://picsum.photos/400/600?random=167',
     imageHint: 'alien jungle',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-movie-8',
@@ -1863,6 +2197,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 91,
     imageUrl: 'https://picsum.photos/400/600?random=168',
     imageHint: 'mars landscape',
+    languages: ['English', 'Mandarin'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-movie-9',
@@ -1874,6 +2210,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 96,
     imageUrl: 'https://picsum.photos/400/600?random=169',
     imageHint: 'astronaut space',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-movie-10',
@@ -1885,6 +2223,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 94,
     imageUrl: 'https://picsum.photos/400/600?random=170',
     imageHint: 'alien ship',
+    languages: ['English', 'Russian', 'Mandarin'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-movie-11',
@@ -1896,6 +2236,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 94,
     imageUrl: 'https://picsum.photos/400/600?random=171',
     imageHint: 'fantasy landscape',
+    languages: ['English'],
+    subtitles: ['English', 'Elvish', 'Spanish'],
   },
   {
     id: 'scifi-movie-12',
@@ -1907,6 +2249,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 64,
     imageUrl: 'https://picsum.photos/400/600?random=172',
     imageHint: 'dragon gold',
+    languages: ['English'],
+    subtitles: ['English', 'Dwarvish', 'Spanish'],
   },
   {
     id: 'scifi-movie-13',
@@ -1918,6 +2262,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 96,
     imageUrl: 'https://picsum.photos/400/600?random=173',
     imageHint: 'magic castle',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-movie-14',
@@ -1929,6 +2275,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 74,
     imageUrl: 'https://picsum.photos/400/600?random=174',
     imageHint: 'magic creatures',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-movie-15',
@@ -1940,6 +2288,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 89,
     imageUrl: 'https://picsum.photos/400/600?random=175',
     imageHint: 'magic spells',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-movie-16',
@@ -1951,6 +2301,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 85,
     imageUrl: 'https://picsum.photos/400/600?random=176',
     imageHint: 'superhero fight',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-movie-17',
@@ -1962,6 +2314,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 93,
     imageUrl: 'https://picsum.photos/400/600?random=177',
     imageHint: 'spider-man city',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-movie-18',
@@ -1973,6 +2327,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 92,
     imageUrl: 'https://picsum.photos/400/600?random=178',
     imageHint: 'space team',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-movie-19',
@@ -1984,6 +2340,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 47,
     imageUrl: 'https://picsum.photos/400/600?random=179',
     imageHint: 'ancient aliens',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-movie-20',
@@ -1995,6 +2353,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 83,
     imageUrl: 'https://picsum.photos/400/600?random=180',
     imageHint: 'desert planet',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-webseries-1',
@@ -2006,6 +2366,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 92,
     imageUrl: 'https://picsum.photos/400/600?random=181',
     imageHint: '80s kids',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-webseries-2',
@@ -2017,6 +2379,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 95,
     imageUrl: 'https://picsum.photos/400/600?random=182',
     imageHint: 'time travel',
+    languages: ['German'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-webseries-3',
@@ -2028,6 +2392,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 80,
     imageUrl: 'https://picsum.photos/400/600?random=183',
     imageHint: 'robot cowboy',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-webseries-4',
@@ -2039,6 +2405,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 95,
     imageUrl: 'https://picsum.photos/400/600?random=184',
     imageHint: 'spaceship interior',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-webseries-5',
@@ -2050,6 +2418,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 86,
     imageUrl: 'https://picsum.photos/400/600?random=185',
     imageHint: 'starfleet ship',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-webseries-6',
@@ -2061,6 +2431,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 85,
     imageUrl: 'https://picsum.photos/400/600?random=186',
     imageHint: 'old captain',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-webseries-7',
@@ -2072,6 +2444,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 90,
     imageUrl: 'https://picsum.photos/400/600?random=187',
     imageHint: 'phone box',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-webseries-8',
@@ -2083,6 +2457,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 84,
     imageUrl: 'https://picsum.photos/400/600?random=188',
     imageHint: 'dystopian future',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-webseries-9',
@@ -2094,6 +2470,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 75,
     imageUrl: 'https://picsum.photos/400/600?random=189',
     imageHint: 'cyberpunk city',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-webseries-10',
@@ -2105,6 +2483,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 93,
     imageUrl: 'https://picsum.photos/400/600?random=190',
     imageHint: 'space western',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-webseries-11',
@@ -2116,6 +2496,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 82,
     imageUrl: 'https://picsum.photos/400/600?random=191',
     imageHint: 'jedi master',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-webseries-12',
@@ -2127,6 +2509,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 92,
     imageUrl: 'https://picsum.photos/400/600?random=192',
     imageHint: 'time variance',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-webseries-13',
@@ -2138,6 +2522,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 91,
     imageUrl: 'https://picsum.photos/400/600?random=193',
     imageHint: 'sitcom life',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-webseries-14',
@@ -2149,6 +2535,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 98,
     imageUrl: 'https://picsum.photos/400/600?random=194',
     imageHint: 'teen superhero',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-webseries-15',
@@ -2160,6 +2548,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 92,
     imageUrl: 'https://picsum.photos/400/600?random=195',
     imageHint: 'archers action',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-webseries-16',
@@ -2171,6 +2561,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 89,
     imageUrl: 'https://picsum.photos/400/600?random=196',
     imageHint: 'hero partners',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-webseries-17',
@@ -2182,6 +2574,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 89,
     imageUrl: 'https://picsum.photos/400/600?random=197',
     imageHint: 'dragon fire',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-webseries-18',
@@ -2193,6 +2587,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 93,
     imageUrl: 'https://picsum.photos/400/600?random=198',
     imageHint: 'targaryen sigil',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-webseries-19',
@@ -2204,6 +2600,8 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 81,
     imageUrl: 'https://picsum.photos/400/600?random=199',
     imageHint: 'witcher medallion',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
   {
     id: 'scifi-webseries-20',
@@ -2215,5 +2613,7 @@ export const mockContent: EntertainmentContent[] = [
     rottenTomatoesRating: 88,
     imageUrl: 'https://picsum.photos/400/600?random=200',
     imageHint: 'dark magic',
+    languages: ['English'],
+    subtitles: ['English', 'Spanish', 'French'],
   },
 ];
