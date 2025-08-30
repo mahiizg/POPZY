@@ -10,12 +10,13 @@ import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
-import { Film, Tv, Clapperboard, Home as HomeIcon, ListFilter } from 'lucide-react';
+import { Film, Tv, Clapperboard, Home as HomeIcon, ListFilter, Wand2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { Sidebar, SidebarProvider, SidebarContent, SidebarInset, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarHeader, SidebarGroup, SidebarGroupLabel, SidebarGroupContent, SidebarTrigger } from '@/components/ui/sidebar';
 import Logo from '@/components/logo';
 import { HeroSection } from '@/components/hero-section';
+import { RecommendationsSheet } from '@/components/recommendations-sheet';
 
 export default function BrowsePage() {
   const [isMounted, setIsMounted] = useState(false);
@@ -72,6 +73,10 @@ export default function BrowsePage() {
       }
     });
   };
+  
+  const handleClearHistory = () => {
+    setViewingHistory([]);
+  }
 
   const categories: {name: Category | 'all', label: string, icon: React.ElementType}[] = [
     { name: 'all', label: 'Home', icon: HomeIcon },
@@ -120,6 +125,14 @@ export default function BrowsePage() {
                 </SidebarMenuButton>
               </SidebarMenuItem>
             ))}
+             <SidebarMenuItem>
+                <RecommendationsSheet viewingHistory={viewingHistory} onClearHistory={handleClearHistory}>
+                  <SidebarMenuButton tooltip="For You">
+                    <Wand2 />
+                    <span>For You</span>
+                  </SidebarMenuButton>
+                </RecommendationsSheet>
+            </SidebarMenuItem>
           </SidebarMenu>
            <Separator className="my-2" />
           <SidebarGroup>
