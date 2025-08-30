@@ -12,7 +12,7 @@ const PopcornIcon = (props: React.SVGProps<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
   >
     {/* Bucket */}
-    <g transform="translate(12, 30) scale(0.75)">
+    <g transform="translate(15, 30) scale(0.7)">
       <path d="M30 85 L25 45 H 75 L 70 85 Z" fill="white" stroke="gray" strokeWidth="6"/>
       {/* Red Stripes */}
       <path d="M30 85 L25 45 H 50 L 50 85 Z" fill="#D94A4A"/>
@@ -57,7 +57,7 @@ const Logo = ({ className }: { className?: string }) => {
       <div className="font-bold uppercase text-5xl text-foreground flex items-center">
         <span className="tracking-tighter">P</span>
         <PopcornIcon className="w-[3.2rem] h-[3.2rem] -ml-2" />
-        <span className="tracking-tighter">PZY</span>
+        <span className="tracking-tighter -ml-2">PZY</span>
       </div>
     </Link>
   );
