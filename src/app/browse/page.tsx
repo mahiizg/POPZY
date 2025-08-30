@@ -10,11 +10,12 @@ import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
-import { Film, Tv, Clapperboard, Home as HomeIcon, Popcorn as PopcornIcon, ListFilter } from 'lucide-react';
+import { Film, Tv, Clapperboard, Home as HomeIcon, ListFilter } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
-import { Sidebar, SidebarProvider, SidebarContent, SidebarInset, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarHeader, SidebarTrigger, SidebarGroup, SidebarGroupLabel, SidebarGroupContent } from '@/components/ui/sidebar';
+import { Sidebar, SidebarProvider, SidebarContent, SidebarInset, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarHeader, SidebarGroup, SidebarGroupLabel, SidebarGroupContent } from '@/components/ui/sidebar';
 import Logo from '@/components/logo';
+import { HeroSection } from '@/components/hero-section';
 
 export default function BrowsePage() {
   const [isMounted, setIsMounted] = useState(false);
@@ -78,6 +79,9 @@ export default function BrowsePage() {
     { name: 'tv show', label: 'TV Shows', icon: Tv }, 
     { name: 'webseries', label: 'Webseries', icon: Clapperboard }
   ];
+  
+  const featuredContent = mockContent.find(c => c.id === 'action-movie-8');
+
 
   if (!isMounted) {
     return (
@@ -149,6 +153,7 @@ export default function BrowsePage() {
         <div className="flex flex-col min-h-screen">
         <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         <main className="flex-1">
+            {featuredContent && <HeroSection content={featuredContent} />}
             <div className="container mx-auto px-4 py-8">
             <div className="flex items-center justify-between gap-4 mb-8">
                 <h2 className="text-2xl font-semibold capitalize">{activeCategory === 'all' ? 'Home' : activeCategory}</h2>
