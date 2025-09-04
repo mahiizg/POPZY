@@ -1,3 +1,4 @@
+
 # 🍿 Popzy - Your Next-Gen Streaming Companion
 
 <p align="center">
@@ -9,16 +10,16 @@
 </p>
 
 <p align="center">
-  <a href="#-features">Features</a> •
-  <a href="#-screenshots">Screenshots</a> •
-  <a href="#-tech-stack">Tech Stack</a> •
-  <a href="#-getting-started">Getting Started</a> •
-  <a href="#-contributing">Contributing</a>
+  <a href="#-key-features">✨ Key Features</a> •
+  <a href="#-gallery">📸 Gallery</a> •
+  <a href="#-tech-stack">💻 Tech Stack</a> •
+  <a href="#-getting-started">🚀 Getting Started</a> •
+  <a href="#-contributing">🤝 Contributing</a>
 </p>
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
 Popzy is a modern streaming app UI built with Next.js, designed to provide an immersive and personalized content discovery experience.
 
@@ -31,17 +32,34 @@ Popzy is a modern streaming app UI built with Next.js, designed to provide an im
 
 ---
 
-## 📸 Screenshots
+## 📸 Gallery
 
-Showcase your app's beautiful interface here. Just replace the placeholder URLs with links to your actual screenshots.
+Here's a showcase of the app's beautiful interface. You can replace the placeholder URLs with links to your actual screenshots or animated GIFs.
+
+**To add a screenshot:**
+`<img src="YOUR_SCREENSHOT_URL" alt="Description" width="400"/>`
+
+**To add a video (as a GIF):**
+`<img src="YOUR_GIF_URL" alt="Description" width="400"/>`
+
 
 | **Profile Selection** | **Browse Page** |
 | :---: | :---: |
-| _Your screenshot here_ | _Your screenshot here_ |
+| <img src="YOUR_SCREENSHOT_OR_GIF_URL" alt="Profile Selection Screen" width="400"/> | <img src="YOUR_SCREENSHOT_OR_GIF_URL" alt="Browse Page" width="400"/> |
 | **Content Details** | **AI Recommendations** |
-| _Your screenshot here_ | _Your screenshot here_ |
+| <img src="YOUR_SCREENSHOT_OR_GIF_URL" alt="Content Details Dialog" width="400"/> | <img src="YOUR_SCREENSHOT_OR_GIF_URL" alt="AI Recommendations Sheet" width="400"/> |
 | **Snack Ordering** | **Delivery Details** |
-| _Your screenshot here_ | _Your screenshot here_ |
+| <img src="YOUR_SCREENSHOT_OR_GIF_URL" alt="Snack Ordering Page" width="400"/> | <img src="YOUR_SCREENSHOT_OR_GIF_URL" alt="Delivery Details Form" width="400"/> |
+
+---
+
+## ⚙️ Workflow Banner
+
+Here you can add a banner or diagram that illustrates your application's workflow, such as the Genkit flow visualization.
+
+<p align="center">
+  <img src="YOUR_WORKFLOW_BANNER_URL" alt="App Workflow" width="800">
+</p>
 
 ---
 
