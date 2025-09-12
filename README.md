@@ -1,15 +1,9 @@
 
 # 🍿 Popzy - Your Next-Gen Streaming Companion
-
-<p align="center">
-  <img src="Screenshot 2025-09-13 at 12.33.41 AM.png" alt="Screenshot 2025-09-13 at 12 33 41 AM" width="700" />
-" alt="Popzy Banner" width="800">
-</p>
-
 <p align="center">
   <strong>Discover, watch, and get personalized recommendations for your next favorite movie or show.</strong>
 </p>
-
+<img width="734" height="350" alt="Screenshot 2025-09-13 at 12 33 41 AM" src="https://github.com/user-attachments/assets/47b1b622-91bc-451b-8f2a-a84a0339bcf9" />
 <p align="center">
   <a href="#-key-features">✨ Key Features</a> •
   <a href="#-gallery">📸 Gallery</a> •
@@ -35,34 +29,20 @@ Popzy is a modern streaming app UI built with Next.js, designed to provide an im
 
 ## 📸 Gallery
 
-Here's a showcase of the app's beautiful interface. You can replace the placeholder URLs with links to your actual screenshots or animated GIFs.
-
-**To add a screenshot:**
-`<img src="YOUR_SCREENSHOT_URL" alt="Description" width="400"/>`
-
-**To add a video (as a GIF):**
-`<img src="YOUR_GIF_URL" alt="Description" width="400"/>`
-
+Here's a showcase of the app's beautiful interface. You can replace the placeholder URLs with links to your actual screenshots or animated GIF-
 
 | **Profile Selection** | **Browse Page** |
 | :---: | :---: |
-| <img src="YOUR_SCREENSHOT_OR_GIF_URL" alt="Profile Selection Screen" width="400"/> | <img src="YOUR_SCREENSHOT_OR_GIF_URL" alt="Browse Page" width="400"/> |
-| **Content Details** | **AI Recommendations** |
-| <img src="YOUR_SCREENSHOT_OR_GIF_URL" alt="Content Details Dialog" width="400"/> | <img src="YOUR_SCREENSHOT_OR_GIF_URL" alt="AI Recommendations Sheet" width="400"/> |
+|<img width="1463" height="825" alt="Screenshot 2025-09-05 at 5 41 30 PM" src="https://github.com/user-attachments/assets/bdc08208-8523-4462-a71b-19cbdf550f79" >| <img width="1465" height="829" alt="Screenshot 2025-09-05 at 5 42 10 PM" src="https://github.com/user-attachments/assets/02eb1fc9-75b7-453a-8801-b522c529fb7f" />
+
+| **Content Details** | **Filter Content** |
+| :---: | :---: |
+|<img width="1465" height="832" alt="Screenshot 2025-09-05 at 5 42 30 PM" src="https://github.com/user-attachments/assets/519dd394-a07f-4f8d-a85d-6219677d3cd2" />| <img width="1465" height="832" alt="Screenshot 2025-09-05 at 5 44 54 PM" src="https://github.com/user-attachments/assets/6af6f997-c22c-4c54-b811-ec8761ff1e03" />
+ 
 | **Snack Ordering** | **Delivery Details** |
-| <img src="YOUR_SCREENSHOT_OR_GIF_URL" alt="Snack Ordering Page" width="400"/> | <img src="YOUR_SCREENSHOT_OR_GIF_URL" alt="Delivery Details Form" width="400"/> |
+| :---: | :---: |
+| <img width="1466" height="829" alt="Screenshot 2025-09-05 at 5 43 38 PM" src="https://github.com/user-attachments/assets/9f626b3f-f379-4923-80c3-aea050d62938" />| <img width="1466" height="826" alt="Screenshot 2025-09-05 at 5 43 53 PM" src="https://github.com/user-attachments/assets/b18dc8a1-c063-4455-8424-bd36b0fabb91" />
 
----
-
-## ⚙️ Workflow Banner
-
-Here you can add a banner or diagram that illustrates your application's workflow, such as the Genkit flow visualization.
-
-<p align="center">
-  <img src="YOUR_WORKFLOW_BANNER_URL" alt="App Workflow" width="800">
-</p>
-
----
 
 ## 💻 Tech Stack
 
