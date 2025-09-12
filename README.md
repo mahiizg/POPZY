@@ -3,7 +3,7 @@
 <p align="center">
   <strong>Discover, watch, and get personalized recommendations for your next favorite movie or show.</strong>
 </p>
-<img width="734" height="350" alt="Screenshot 2025-09-13 at 12 33 41 AM" src="https://github.com/user-attachments/assets/47b1b622-91bc-451b-8f2a-a84a0339bcf9" />
+<img align="center" width="734" height="350" alt="Screenshot 2025-09-13 at 12 33 41 AM" src="https://github.com/user-attachments/assets/47b1b622-91bc-451b-8f2a-a84a0339bcf9" />
 <p align="center">
   <a href="#-key-features">✨ Key Features</a> •
   <a href="#-gallery">📸 Gallery</a> •
