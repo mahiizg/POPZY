@@ -2,7 +2,8 @@
 # 🍿 Popzy - Your Next-Gen Streaming Companion
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/firebase/genkit/main/docs/assets/studio-examples/popzy-banner.png" alt="Popzy Banner" width="800">
+  <img src="<img width="734" height="350" alt="Screenshot 2025-09-13 at 12 33 41 AM" src="https://github.com/user-attachments/assets/bcc6c349-1262-429e-9e67-8e52b62609e5" />
+" alt="Popzy Banner" width="800">
 </p>
 
 <p align="center">
